@@ -1,4 +1,6 @@
-# [ulx3s.github.io](ulx3s.github.io) 
+| Option | Description |
+| :------| -----------:|
+| # [ulx3s.github.io](ulx3s.github.io) | [Improve this doc](https://github.com/ulx3s/ulx3s.github.io) |
 
 This is the home of all the awesome repos and forks of community projects that can be used with the ULX3S FPGA ESP32 board.
 
