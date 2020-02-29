@@ -10,8 +10,9 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 * [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [github.com/gojimmypi/ulx3s-adda](https://github.com/gojimmypi/ulx3s-adda); see also [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) 
 * [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [github.com/felipesanches/AnotherWorld_FPGA](https://github.com/felipesanches/AnotherWorld_FPGA) see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
-* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
+* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://x`github.com/emard/apple2fpga)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija)
+* [Oscilloscope from hdl4fpga: scopeio](https://github.com/hdl4fpga/hdl4fpga/blob/master/ULX3S/scopeio/scopeio_top.vhd) see also [demo binaries](https://github.com/emard/ulx3s-bin/tree/master/fpga/scope)
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81)
 
 ## Other ULX3S Links:
