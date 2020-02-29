@@ -28,12 +28,13 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Other FPGA Links:
 * [FOMU](https://workshop.fomu.im/en/latest/)
-* [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker)
+* [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker). See also [workshop](https://github.com/icebreaker-fpga/icebreaker-workshop)
 * [TinyFPGA](https://tinyfpga.com/)
 
 # Other Interesting Stuff:
 * [nanoFramework - C# on the ESP32](http://docs.nanoframework.net/)
 * [Quokka Basic CLI for running C# => VHDL or Verilog transformation](https://github.com/EvgenyMuryshkin/QuokkaEvaluation)
+* [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
 * [Verilog Syntax Highligher for Visual Stuldio](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 * [Visual Micro Ardunio IDE for the ESP32 in Visual Studio](https://www.visualmicro.com/)
 * [xobs circuitpython](https://github.com/xobs/circuitpython)
