@@ -17,7 +17,6 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Other ULX3S Links:
 * [Radiona.org](https://radiona.org/ulx3s/)
-
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s)
 * [emard's ULX3S Quick-start binaries ](https://github.com/emard/ulx3s-bin)
 * [ULX3S gitter lobby](https://gitter.im/ulx3s/Lobby)
@@ -32,7 +31,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker). See also [workshop](https://github.com/icebreaker-fpga/icebreaker-workshop)
 * [TinyFPGA](https://tinyfpga.com/)
 
-# Other Interesting Stuff:
+## Other Interesting Stuff:
 * [nanoFramework - C# on the ESP32](http://docs.nanoframework.net/)
 * [Quokka Basic CLI for running C# => VHDL or Verilog transformation](https://github.com/EvgenyMuryshkin/QuokkaEvaluation)
 * [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
