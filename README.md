@@ -8,11 +8,11 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Projects and Examples:
 
-* [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [https://github.com/gojimmypi/ulx3s-adda]; see also [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) 
-* [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [https://github.com/felipesanches/AnotherWorld_FPGA] see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
-* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [https://github.com/emard/apple2fpga/](github.com/emard/apple2fpga)
-* [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [https://github.com/emard/galaksija](github.com/emard/galaksija)
-* [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [https://github.com/lawrie/ulx3s_zx81](github.com/lawrie/ulx3s_zx8)
+* [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [github.com/gojimmypi/ulx3s-adda](https://github.com/gojimmypi/ulx3s-adda); see also [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) 
+* [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [github.com/felipesanches/AnotherWorld_FPGA](https://github.com/felipesanches/AnotherWorld_FPGA) see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
+* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
+* [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija)
+* [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81)
 
 ## Other ULX3S Links:
 * [Radiona.org](https://radiona.org/ulx3s/)
