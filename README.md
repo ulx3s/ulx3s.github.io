@@ -26,10 +26,12 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [CNX Software - ULX3S Education Board is Powered by Lattice Semi ECP5 FPGA & ESP32 WiFi/BLE Module](https://www.cnx-software.com/2019/08/30/ulx3s-education-board-is-powered-by-lattice-semi-ecp5-fpga-esp32-wifi-ble-module/)
 * [Hackaday - ULX3S: An open-source Lattice ECP5 FPGA PCB January 14, 2019](https://hackaday.com/2019/01/14/ulx3s-an-open-source-lattice-ecp5-fpga-pcb/)
 
-## Other FPGA Links:
+## Other FPGA Hardware Links:
+* [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
 * [FOMU](https://workshop.fomu.im/en/latest/)
 * [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker). See also [workshop](https://github.com/icebreaker-fpga/icebreaker-workshop)
 * [TinyFPGA](https://tinyfpga.com/)
+
 
 ## Other Interesting Stuff:
 * [nanoFramework - C# on the ESP32](http://docs.nanoframework.net/)
