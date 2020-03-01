@@ -80,7 +80,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Other FPGA Hardware Links:
 * [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
-* [FOMU](https://workshop.fomu.im/en/latest/) see also [crowdsupply.com/sutajio-kosagi/fomu](https://www.crowdsupply.com/sutajio-kosagi/fomu)
+* [FOMU](https://workshop.fomu.im/en/latest/) see also [timvideos Getting Started](https://github.com/timvideos/litex-buildenv/wiki/Getting-started-with-FOMU-(an-FPGA-in-your-USB-port)), [crowdsupply.com/sutajio-kosagi/fomu](https://www.crowdsupply.com/sutajio-kosagi/fomu)
 * [Glasgow](https://github.com/GlasgowEmbedded/glasgow) see also [crowdsupply.com/1bitsquared/glasgow](https://www.crowdsupply.com/1bitsquared/glasgow)
 * [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker). See also [workshop](https://github.com/icebreaker-fpga/icebreaker-workshop)
 * [Orange Crab](https://github.com/gregdavill/OrangeCrab) ECP5 DDR3 memory in a Feather form-factor
