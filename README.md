@@ -23,9 +23,10 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
+* [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
 * [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32; JTAG programming and flashing of Lattice ECP5 FPGA JTAG
-* [NES mod by emard](https://github.com/emard/nes_ecp5) forked from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
+* [NES by ironsteel](https://github.com/emard/nes_ecp5) emard's fork and mods from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
 * [Next186 MS-DOS](https://github.com/emard/Next186) forked from [github.com/Basman74/Next186](https://github.com/Basman74/Next186)
 * [Oberon](https://github.com/emard/oberon) see also [andreaspirklbauer/Oberon-extended](https://github.com/andreaspirklbauer/Oberon-extended)
 * [Odysseus Workshop](https://github.com/ulx3s/fpga-odysseus) - material for participation at FPGA Odysseus with ULX3S Workshop at Radiona event in Zagreb
@@ -43,7 +44,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 
 
 ## Other ULX3S Links:
-* [Radiona.org](https://radiona.org/ulx3s/)
+* [Radiona.org](https://radiona.org/ulx3s/) and their [YouTube Channel](https://www.youtube.com/channel/UCYkEAHs8F4tvyb9Y2CcP3_w)
 * [DIY kitspace](https://kitspace.org/boards/github.com/emard/ulx3s/) 
 * [Dobrica Video](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s) in particular the [schematic](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) and [ECP5 constraint file](https://github.com/emard/ulx3s/blob/master/doc/constraints/ulx3s_v20.lpf).
@@ -61,6 +62,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 ## Blogs Featuring the ULX3S
 * [Alexander Lang](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
+* [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
 
 ## Other FPGA Hardware Links:
