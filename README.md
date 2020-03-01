@@ -45,7 +45,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 ## Other ULX3S Links:
 * [Radiona.org](https://radiona.org/ulx3s/)
 * [DIY kitspace](https://kitspace.org/boards/github.com/emard/ulx3s/) 
-* [Dobrica Pavlinuši?](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
+* [Dobrica Video](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s) in particular the [schematic](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) and [ECP5 constraint file](https://github.com/emard/ulx3s/blob/master/doc/constraints/ulx3s_v20.lpf).
 * [emard's ULX3S Quick-start binaries ](https://github.com/emard/ulx3s-bin)
 * [ULX3S gitter lobby](https://gitter.im/ulx3s/Lobby)
