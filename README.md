@@ -28,6 +28,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
 * [LED Panel](https://github.com/goran-mahovlic/prjtrellis-led64x64) Example for 64x64 LED panel
 * [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
+* [Logic Analyzer Video](https://www.youtube.com/watch?v=I_yYem0Nowc)
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
 * [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32; JTAG programming and flashing of Lattice ECP5 FPGA JTAG
 * [NES by ironsteel](https://github.com/emard/nes_ecp5) emard's fork and mods from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
@@ -49,6 +50,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Tools](https://github.com/f32c/tools) F32C JTAG programmer, ujprog, f32cup binary uploader
 * [UK101](https://github.com/emard/UK101onFPGA) emard's UK101 on FPGA (see also [Orao](https://github.com/emard/UK101onFPGA))
 * [WiFi JTAG](https://github.com/emard/WiFiJTAG) see also [this video](https://www.youtube.com/watch?v=cgYtZW4zPSI)
+* [YAZSOF Z80](https://github.com/chriscamacho/YAZSOF) https://github.com/chriscamacho/YAZSOF
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
 
@@ -83,11 +85,15 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [TinyFPGA](https://tinyfpga.com/) see also [crowdsupply.com/tinyfpga/tinyfpga-bx](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)
 
 ## Other Interesting Stuff:
+* [APIO](https://apiodoc.readthedocs.io/en/stable/) see also https://github.com/FPGAwars/apio
 * [BB3-ULX3S Integration](https://www.envox.hr/eez/bb3-ulx3s-integration/poc8-introduction.html) see also [EEZ Bench Box 3 by Envox](https://www.crowdsupply.com/envox/eez-bb3)
 * [nanoFramework - C# on the ESP32](http://docs.nanoframework.net/)
 * [Quokka Basic CLI for running C# => VHDL or Verilog transformation](https://github.com/EvgenyMuryshkin/QuokkaEvaluation)
 * [Icestorm](http://www.clifford.at/icestorm/)
+* [Icestudio](https://icestudio.io/) see also [github.com/FPGAwars/icestudio](https://github.com/FPGAwars/icestudio)
+* [picorv32 - rxrbln](https://github.com/rxrbln/picorv32) PicoRV32 - A Size-Optimized RISC-V CPU
 * [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
+* [sigrok](https://sigrok.org/wiki/Main_Page)
 * [Thingverse Enclosure](https://www.thingiverse.com/thing:3369567) by [ketukil](https://www.thingiverse.com/ketukil/about)
 * [Verilog Syntax Highligher for Visual Stuldio](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 * [Visual Micro Ardunio IDE for the ESP32 in Visual Studio](https://www.visualmicro.com/)
