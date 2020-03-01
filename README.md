@@ -48,6 +48,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Synth-o-Wheel](https://github.com/emard/synthowheel) True polyphonic additive synthesizer as parametric VHDL core with realtime performance.
 * [ST7789 display](https://github.com/emard/st7789py_mpy) slow MicroPython driver for 240x240 ST7789 display without CS pin from Ali Express
 * [TI-99](https://github.com/emard/ti99_2) A never released home computer in the TI-99/4A family, implemented on the ULX3S fpga board. See also [TI99/2](https://gitlab.com/pnru/ti99/tree/master/ti99_2)
+* [Tic tac toe](https://github.com/emard/Verilog_tic-tac-toe) This is an implementation of "Tic Tac Toe" (noughts and crosses) in Verilog. The user plays against the FPGA
 * [Tools](https://github.com/f32c/tools) F32C JTAG programmer, ujprog, f32cup binary uploader
 * [UK101](https://github.com/emard/UK101onFPGA) emard's UK101 on FPGA (see also [Orao](https://github.com/emard/UK101onFPGA))
 * [WiFi JTAG](https://github.com/emard/WiFiJTAG) see also [this video](https://www.youtube.com/watch?v=cgYtZW4zPSI)
