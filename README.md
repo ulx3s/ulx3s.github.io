@@ -24,7 +24,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [FM Flea Radio](https://github.com/emard/flearadio) FM radio receiver for FPGA with simple RLC network and analog comparator (available on-chip, no ADC required).
 * [FPGArduino](https://github.com/f32c/fpgarduino) Arduino core extensions for FPGA-based 32-bit MIPS and RISC-V soft CPU cores (f32c). See also [FPGArduino source](https://github.com/f32c/arduino), [this description](http://www.nxlab.fer.hr/fpgarduino/), [this video](https://www.youtube.com/watch?v=2DlkXjZnMjc) and [this video](https://www.youtube.com/watch?v=Q5GEMc2oYsw)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
-* [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
+* [GHDL](https://github.com/kost/ulx3s-ghdl-examples) GHDL ULX3S Examples - simple VHDL examples using open source VHDL synthesis
 * [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror) HDMI IN >> HDMI OUT with PMOD
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
 * [LED Panel](https://github.com/goran-mahovlic/prjtrellis-led64x64) Example for 64x64 LED panel
@@ -42,7 +42,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
 * [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD) HDMI, I2S, LoRa, MAX31855, MLX90640, OV7670, PS2, USB, SD, and more!
 * [RDS Modulator](https://github.com/emard/rdsfpga) RDS modulator for FPGA; This code comes complete with FM transmitter. No external components are needed.
-* [SaxonSoc Linux](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc) see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23)
+* [SaxonSoc Linux Build](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc), see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23) all based on [SpinalHDL/SaxonSoc](https://github.com/SpinalHDL/SaxonSoc)
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
 * [Synth-o-Wheel](https://github.com/emard/synthowheel) True polyphonic additive synthesizer as parametric VHDL core with realtime performance.
@@ -55,6 +55,13 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [YAZSOF Z80](https://github.com/chriscamacho/YAZSOF) chriscamacho's Yet Another Z80 SoC On FPGA
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
+## Toolchains and Utilities
+* [Icestorm](http://www.clifford.at/icestorm/)
+* [Mac OS X support @kost homebrew](https://github.com/kost/homebrew-ulx3s)
+* [nextpnr](https://github.com/YosysHQ/nextpnr)
+* [project-trellis](https://github.com/SymbiFlow/prjtrellis)
+* [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32) 
+* [yosys](http://www.clifford.at/yosys/)
 
 ## Other ULX3S Links:
 * [Radiona.org](https://radiona.org/ulx3s/) and their [YouTube Channel](https://www.youtube.com/channel/UCYkEAHs8F4tvyb9Y2CcP3_w)
@@ -77,6 +84,9 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
 * [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
+
+## Videos Featuring the ULX3S
+[RenéRebe™ KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
 
 ## Other FPGA Hardware Links:
 * [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
