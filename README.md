@@ -1,4 +1,4 @@
-# [ulx3s.github.io](https://ulx3s.github.io)  
+# [ulx3s.github.io](https://ulx3s.github.io)
 
 This is the home of all the awesome repos and forks of community projects that can be used with the ULX3S FPGA ESP32 board.
 
@@ -23,13 +23,13 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
-* [Logic Sniffer]( https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
+* [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
 * [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32 to allow JTAG programming and flashing of Lattice ECP5 FPGA JTAG
 * [NES mod by emard](https://github.com/emard/nes_ecp5) forked from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
 * [Next186 MS-DOS](https://github.com/emard/Next186) forked from [github.com/Basman74/Next186](https://github.com/Basman74/Next186)
 * [Oberon](https://github.com/emard/oberon) see also [andreaspirklbauer/Oberon-extended](https://github.com/andreaspirklbauer/Oberon-extended)
 * [Odysseus Workshop](https://github.com/ulx3s/fpga-odysseus) - material for participation at FPGA Odysseus with ULX3S Workshop at Radiona event in Zagreb
-* [Orao](https://github.com/emard/UK101onFPGA) emard's fork of [Grant Seale's](https://twitter.com/zx80nut) great work for emulation of Compukit UK101 on FPGA
+* [Orao](https://github.com/emard/UK101onFPGA) emard's fork of [Grant Seale](https://twitter.com/zx80nut)'s great work for emulation of Compukit UK101 on FPGA
 * [Oscilloscope from hdl4fpga: scopeio](https://github.com/hdl4fpga/hdl4fpga/blob/master/ULX3S/scopeio/scopeio_top.vhd) see also [demo binaries](https://github.com/emard/ulx3s-bin/tree/master/fpga/scope)
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
 * [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD)
@@ -52,7 +52,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 
 ## Articles Featuring the ULX3S
 
-* [BedroomCoders - ULX3S (ECP5 FPGA) first look.](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/)
+* [BedroomCoders - ULX3S (ECP5 FPGA) first look](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/)
 * [CNX Software - ULX3S Education Board is Powered by Lattice Semi ECP5 FPGA & ESP32 WiFi/BLE Module](https://www.cnx-software.com/2019/08/30/ulx3s-education-board-is-powered-by-lattice-semi-ecp5-fpga-esp32-wifi-ble-module/)
 * [ee News Embedded - Lattice ECP5 FPGA board for open-source development October 28, 2019](https://www.eenewsembedded.com/news/lattice-ecp5-fpga-board-open-source-development)
 * [Hackaday - ULX3S: An open-source Lattice ECP5 FPGA PCB January 14, 2019](https://hackaday.com/2019/01/14/ulx3s-an-open-source-lattice-ecp5-fpga-pcb/)
