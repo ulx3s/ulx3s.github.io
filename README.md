@@ -86,7 +86,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
 
 ## Videos Featuring the ULX3S
-[ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
+* [ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
 
 ## Other FPGA Hardware Links:
 * [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
@@ -115,4 +115,4 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 More links on [RadionaOrg/ulx3s-links](https://github.com/RadionaOrg/ulx3s-links)
 
-[Improve this doc](https://github.com/ulx3s/ulx3s.github.io)   hosted by [pages.github.com/](https://pages.github.com/)
+[Improve this doc](https://github.com/ulx3s/ulx3s.github.io). Hosted by [pages.github.com/](https://pages.github.com/). View at [https://ulx3s.github.io](https://ulx3s.github.io)
