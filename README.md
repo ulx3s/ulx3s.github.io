@@ -23,8 +23,9 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [FPGArduino](https://github.com/f32c/fpgarduino) Arduino core extensions for FPGA-based 32-bit MIPS and RISC-V soft CPU cores (f32c). See also [FPGArduino source](https://github.com/f32c/arduino), [this description](http://www.nxlab.fer.hr/fpgarduino/), [this video](https://www.youtube.com/watch?v=2DlkXjZnMjc) and [this video](https://www.youtube.com/watch?v=Q5GEMc2oYsw)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
-* [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror)
+* [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror) HDMI IN >> HDMI OUT with PMOD
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
+* [LED Panel](https://github.com/goran-mahovlic/prjtrellis-led64x64) Example for 64x64 LED panel
 * [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
 * [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32; JTAG programming and flashing of Lattice ECP5 FPGA JTAG
