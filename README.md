@@ -1,8 +1,8 @@
-# [ulx3s.github.io](https://ulx3s.github.io) 
+# [ulx3s.github.io](https://ulx3s.github.io)  
 
 This is the home of all the awesome repos and forks of community projects that can be used with the ULX3S FPGA ESP32 board.
 
-Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
+Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 
 ![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg )
 
@@ -13,7 +13,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Amiga](https://github.com/emard/Minimig_ECS) Port of Amiga emulator "Minimig". See also [this video](https://www.youtube.com/watch?v=q0nysMydf4I)
 * [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [github.com/felipesanches/AnotherWorld_FPGA](https://github.com/felipesanches/AnotherWorld_FPGA) see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
 * [Apple I](https://github.com/emard/apple-one) forked from [github.com/lawrie/apple-one](https://github.com/lawrie/apple-one)
-* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://x`github.com/emard/apple2fpga)
+* [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
 * [Cosmac Elf](https://github.com/lawrie/FPGACosmacELF/tree/master/ulx3s) This is a re-creation of a Cosmac ELF computer, Coded in SpinalHDL
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
