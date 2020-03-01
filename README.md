@@ -32,13 +32,17 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Odysseus Workshop](https://github.com/ulx3s/fpga-odysseus) - material for participation at FPGA Odysseus with ULX3S Workshop at Radiona event in Zagreb
 * [Orao](https://github.com/emard/UK101onFPGA) emard's fork of [Grant Seale](https://twitter.com/zx80nut)'s great work for emulation of Compukit UK101 on FPGA
 * [Oscilloscope from hdl4fpga: scopeio](https://github.com/hdl4fpga/hdl4fpga/blob/master/ULX3S/scopeio/scopeio_top.vhd) see also [demo binaries](https://github.com/emard/ulx3s-bin/tree/master/fpga/scope)
+* [Papilio Arcade](https://github.com/emard/Papilio-Arcade)
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
 * [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD) HDMI, I2S, LoRa, MAX31855, MLX90640, OV7670, PS2, USB, SD, and more!
 * [SaxonSoc Linux](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc) see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23)
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
+* [Synth-o-Wheel](https://github.com/emard/synthowheel) True polyphonic additive synthesizer as parametric VHDL core with realtime performance.
+* [ST7789 display](https://github.com/emard/st7789py_mpy) slow MicroPython driver for 240x240 ST7789 display without CS pin from Ali Express
 * [TI-99](https://github.com/emard/ti99_2) A never released home computer in the TI-99/4A family, implemented on the ULX3S fpga board. See also [TI99/2](https://gitlab.com/pnru/ti99/tree/master/ti99_2)
 * [Tools](https://github.com/f32c/tools) F32C JTAG programmer, ujprog, f32cup binary uploader
+* [UK101](https://github.com/emard/UK101onFPGA) emard's UK101 on FPGA (see also [Orao](https://github.com/emard/UK101onFPGA))
 * [WiFi JTAG](https://github.com/emard/WiFiJTAG) see also [this video](https://www.youtube.com/watch?v=cgYtZW4zPSI)
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
