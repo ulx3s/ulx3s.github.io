@@ -8,6 +8,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 
 ## Projects and Examples:
 
+* [6502](https://github.com/emeb/ulx3s_6502) Simple 6502 system on a ULX3S FPGA board using Trellis, Yosys, and Nextpnr
 * [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [github.com/gojimmypi/ulx3s-adda](https://github.com/gojimmypi/ulx3s-adda); see also [this OSHPark Adapter Board](https://oshpark.com/shared_projects/oRTuqkeG), [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) and [notes](https://gojimmypi.blogspot.com/2019/03/ulx3s-sdr-with-alinx-adda.html) 
 * [Advanced Examples](https://github.com/emard/ulx3s-misc) emard's ADC, DVI, JTAG, OLED, ov7670, PS2, SDRAM, SPI RAM, USB and more. 
 * [Amiga](https://github.com/emard/Minimig_ECS) Port of Amiga emulator "Minimig". See also [this video](https://www.youtube.com/watch?v=q0nysMydf4I)
