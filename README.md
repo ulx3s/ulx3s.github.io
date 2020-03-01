@@ -18,13 +18,13 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
 * [ESP32 passthru](https://github.com/emard/ulx3s-passthru) essential for ESP32. See also [these details](https://github.com/ulx3s/ulx3s-examples/blob/master/passthru/README.md)
-* [f32c](https://github.com/f32c/f32c) retargetable, scalar, pipelined, 32-bit processor core which can execute subsets of either RISC-V or MIPS instruction set
+* [f32c](https://github.com/f32c/f32c) retargetable, scalar, pipelined, 32-bit processor core which can execute subsets of either RISC-V or MIPS
 * [FPGArduino](https://github.com/f32c/fpgarduino) Arduino core extensions for FPGA-based 32-bit MIPS and RISC-V soft CPU cores (f32c). See also [FPGArduino source](https://github.com/f32c/arduino), [this description](http://www.nxlab.fer.hr/fpgarduino/), [this video](https://www.youtube.com/watch?v=2DlkXjZnMjc) and [this video](https://www.youtube.com/watch?v=Q5GEMc2oYsw)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
-* [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32 to allow JTAG programming and flashing of Lattice ECP5 FPGA JTAG
+* [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32; JTAG programming and flashing of Lattice ECP5 FPGA JTAG
 * [NES mod by emard](https://github.com/emard/nes_ecp5) forked from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
 * [Next186 MS-DOS](https://github.com/emard/Next186) forked from [github.com/Basman74/Next186](https://github.com/Basman74/Next186)
 * [Oberon](https://github.com/emard/oberon) see also [andreaspirklbauer/Oberon-extended](https://github.com/andreaspirklbauer/Oberon-extended)
@@ -32,7 +32,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Orao](https://github.com/emard/UK101onFPGA) emard's fork of [Grant Seale](https://twitter.com/zx80nut)'s great work for emulation of Compukit UK101 on FPGA
 * [Oscilloscope from hdl4fpga: scopeio](https://github.com/hdl4fpga/hdl4fpga/blob/master/ULX3S/scopeio/scopeio_top.vhd) see also [demo binaries](https://github.com/emard/ulx3s-bin/tree/master/fpga/scope)
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
-* [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD)
+* [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD) HDMI, I2S, LoRa, MAX31855, MLX90640, OV7670, PS2, USB, SD, and more!
 * [SaxonSoc Linux](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc) see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23)
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
@@ -65,10 +65,11 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 
 ## Other FPGA Hardware Links:
 * [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
-* [FOMU](https://workshop.fomu.im/en/latest/)
+* [FOMU](https://workshop.fomu.im/en/latest/) see also [crowdsupply.com/sutajio-kosagi/fomu](https://www.crowdsupply.com/sutajio-kosagi/fomu)
+* [Glasgow](https://github.com/GlasgowEmbedded/glasgow) see also [crowdsupply.com/1bitsquared/glasgow](https://www.crowdsupply.com/1bitsquared/glasgow)
 * [IceBreaker](https://github.com/icebreaker-fpga/icebreaker) at [1bitsquared](https://1bitsquared.com/collections/fpga/products/icebreaker). See also [workshop](https://github.com/icebreaker-fpga/icebreaker-workshop)
-* [TinyFPGA](https://tinyfpga.com/)
-
+* [Orange Crab](https://github.com/gregdavill/OrangeCrab) ECP5 DDR3 memory in a Feather form-factor
+* [TinyFPGA](https://tinyfpga.com/) see also [crowdsupply.com/tinyfpga/tinyfpga-bx](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)
 
 ## Other Interesting Stuff:
 * [BB3-ULX3S Integration](https://www.envox.hr/eez/bb3-ulx3s-integration/poc8-introduction.html) see also [EEZ Bench Box 3 by Envox](https://www.crowdsupply.com/envox/eez-bb3)
