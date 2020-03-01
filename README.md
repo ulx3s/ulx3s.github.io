@@ -19,9 +19,11 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
 * [ESP32 passthru](https://github.com/emard/ulx3s-passthru) essential for ESP32. See also [these details](https://github.com/ulx3s/ulx3s-examples/blob/master/passthru/README.md)
 * [f32c](https://github.com/f32c/f32c) retargetable, scalar, pipelined, 32-bit processor core which can execute subsets of either RISC-V or MIPS
+* [FM Flea Radio](https://github.com/emard/flearadio) FM radio receiver for FPGA with simple RLC network and analog comparator (available on-chip, no ADC required).
 * [FPGArduino](https://github.com/f32c/fpgarduino) Arduino core extensions for FPGA-based 32-bit MIPS and RISC-V soft CPU cores (f32c). See also [FPGArduino source](https://github.com/f32c/arduino), [this description](http://www.nxlab.fer.hr/fpgarduino/), [this video](https://www.youtube.com/watch?v=2DlkXjZnMjc) and [this video](https://www.youtube.com/watch?v=Q5GEMc2oYsw)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) kost's open source VHDL synthesis
+* [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror)
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
 * [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
@@ -35,6 +37,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!!
 * [Papilio Arcade](https://github.com/emard/Papilio-Arcade)
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
 * [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD) HDMI, I2S, LoRa, MAX31855, MLX90640, OV7670, PS2, USB, SD, and more!
+* [RDS Modulator](https://github.com/emard/rdsfpga) RDS modulator for FPGA; This code comes complete with FM transmitter. No external components are needed.
 * [SaxonSoc Linux](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc) see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23)
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
