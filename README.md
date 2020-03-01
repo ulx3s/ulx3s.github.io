@@ -15,6 +15,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [github.com/felipesanches/AnotherWorld_FPGA](https://github.com/felipesanches/AnotherWorld_FPGA) see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
 * [Apple I](https://github.com/emard/apple-one) forked from [github.com/lawrie/apple-one](https://github.com/lawrie/apple-one)
 * [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
+* [Blinky](https://github.com/DoctorWkt/ULX3S-Blinky) see also [these examples](https://github.com/emard/ulx3s-examples/tree/master/blinky) including [Diamond](https://github.com/emard/ulx3s-examples/blob/master/blinky/Diamond/README.md), [open source](https://github.com/emard/ulx3s-examples/blob/master/blinky/OpenSource/README.md) and [ESP32](https://github.com/emard/ulx3s-examples/tree/master/blinky/ESP32)
 * [Cosmac Elf](https://github.com/lawrie/FPGACosmacELF/tree/master/ulx3s) This is a re-creation of a Cosmac ELF computer, Coded in SpinalHDL
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
@@ -50,7 +51,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Tools](https://github.com/f32c/tools) F32C JTAG programmer, ujprog, f32cup binary uploader
 * [UK101](https://github.com/emard/UK101onFPGA) emard's UK101 on FPGA (see also [Orao](https://github.com/emard/UK101onFPGA))
 * [WiFi JTAG](https://github.com/emard/WiFiJTAG) see also [this video](https://www.youtube.com/watch?v=cgYtZW4zPSI)
-* [YAZSOF Z80](https://github.com/chriscamacho/YAZSOF) https://github.com/chriscamacho/YAZSOF
+* [YAZSOF Z80](https://github.com/chriscamacho/YAZSOF) chriscamacho's Yet Another Z80 SoC On FPGA
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
 
@@ -91,6 +92,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Quokka Basic CLI for running C# => VHDL or Verilog transformation](https://github.com/EvgenyMuryshkin/QuokkaEvaluation)
 * [Icestorm](http://www.clifford.at/icestorm/)
 * [Icestudio](https://icestudio.io/) see also [github.com/FPGAwars/icestudio](https://github.com/FPGAwars/icestudio)
+* [Linux on LiteX VexRiscv](https://github.com/litex-hub/linux-on-litex-vexriscv)
 * [picorv32 - rxrbln](https://github.com/rxrbln/picorv32) PicoRV32 - A Size-Optimized RISC-V CPU
 * [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
 * [sigrok](https://sigrok.org/wiki/Main_Page)
