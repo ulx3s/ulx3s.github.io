@@ -69,6 +69,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Dobrica Video](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s) in particular the [schematic](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) and [ECP5 constraint file](https://github.com/emard/ulx3s/blob/master/doc/constraints/ulx3s_v20.lpf).
 * [emard's ULX3S Quick-start binaries ](https://github.com/emard/ulx3s-bin)
+* [Hackspace raspberrypi.org](https://hackspace.raspberrypi.org/articles/space-of-the-month-radiona) Space of the Month: Radiona
 * [ULX3S gitter lobby](https://gitter.im/ulx3s/Lobby)
 
 ## Articles Featuring the ULX3S
@@ -79,11 +80,20 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Hackaday - ULX3S: An open-source Lattice ECP5 FPGA PCB January 14, 2019](https://hackaday.com/2019/01/14/ulx3s-an-open-source-lattice-ecp5-fpga-pcb/)
 * [Hackster.io - ULX3S Project](https://www.hackster.io/radiona/ulx3s-project-f946c2)
 
+## Forums
+
+* [Atari Age](https://atariage.com/forums/topic/297797-ti-992-on-a-fpga-available/) Announcing a TI-99/2 on a FPGA.
+
 ## Blogs Featuring the ULX3S
 * [Alexander Lang](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
+* [Bedroom Coders](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/) ULX3S (ECP5 FPGA) first look.
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
 * [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
+
+## Podcasts
+
+* [Hackaday](https://hackaday.com/2019/01/18/hackaday-podcast-ep2-curious-gadgets-and-the-fpga-brain-trust/) round table of who’s-who in the Open Source FPGA movement discusses what’s next in 2019
 
 ## Videos Featuring the ULX3S
 * [ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
@@ -107,6 +117,7 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [picorv32 - rxrbln](https://github.com/rxrbln/picorv32) PicoRV32 - A Size-Optimized RISC-V CPU
 * [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
 * [sigrok](https://sigrok.org/wiki/Main_Page)
+* [spispy: open source flash emulation](https://trmm.net/Spispy) Trammell Hudson's Projects: rough transcript of presentation at CCC Camp 2019
 * [Thingverse Enclosure](https://www.thingiverse.com/thing:3369567) by [ketukil](https://www.thingiverse.com/ketukil/about)
 * [Verilog Syntax Highligher for Visual Stuldio](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 * [Visual Micro Ardunio IDE for the ESP32 in Visual Studio](https://www.visualmicro.com/)
