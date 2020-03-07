@@ -82,18 +82,18 @@ Coming soon to [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Forums
 
-* [Atari Age](https://atariage.com/forums/topic/297797-ti-992-on-a-fpga-available/) Announcing a TI-99/2 on a FPGA.
+* [Atari Age](https://atariage.com/forums/topic/297797-ti-992-on-a-fpga-available/) Announcing a TI-99/2 on a FPGA
 
 ## Blogs Featuring the ULX3S
 * [Alexander Lang](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
-* [Bedroom Coders](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/) ULX3S (ECP5 FPGA) first look.
+* [Bedroom Coders](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/) ULX3S (ECP5 FPGA) first look
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
 * [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
 
 ## Podcasts
 
-* [Hackaday](https://hackaday.com/2019/01/18/hackaday-podcast-ep2-curious-gadgets-and-the-fpga-brain-trust/) round table of who’s-who in the Open Source FPGA movement discusses what’s next in 2019
+* [Hackaday](https://hackaday.com/2019/01/18/hackaday-podcast-ep2-curious-gadgets-and-the-fpga-brain-trust/) round table of who's-who in the Open Source FPGA movement discusses what's next in 2019
 
 ## Videos Featuring the ULX3S
 * [ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
