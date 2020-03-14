@@ -58,6 +58,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
 ## Toolchains and Utilities
+* [Toolchain Installer](https://github.com/ulx3s/ulx3s-toolchain/blob/master/README.md) Install everything from one script!
 * [Icestorm](http://www.clifford.at/icestorm/)
 * [Mac OS X support @kost homebrew](https://github.com/kost/homebrew-ulx3s)
 * [nextpnr](https://github.com/YosysHQ/nextpnr)
