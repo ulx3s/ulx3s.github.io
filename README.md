@@ -2,7 +2,7 @@
 
 This is the home of all the awesome repos and forks of community projects that can be used with the ULX3S FPGA ESP32 board.
 
-[![ULX3S-launch-orange](./ULX3S-launch-orange.png)](https://www.crowdsupply.com/radiona/ulx3s)
+[![ULX3S-launch-orange](./images/ULX3S-launch-orange.png)](https://www.crowdsupply.com/radiona/ulx3s)
 
 Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
