@@ -69,7 +69,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 ## Other ULX3S Links:
 * [Radiona.org](https://radiona.org/ulx3s/) and their [YouTube Channel](https://www.youtube.com/channel/UCYkEAHs8F4tvyb9Y2CcP3_w)
 * [DIY kitspace](https://kitspace.org/boards/github.com/emard/ulx3s/) 
-* [Dobrica Video](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
+* [Davor and Goran talk about ULX3S](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s) in particular the [schematic](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) and [ECP5 constraint file](https://github.com/emard/ulx3s/blob/master/doc/constraints/ulx3s_v20.lpf).
 * [emard's ULX3S Quick-start binaries ](https://github.com/emard/ulx3s-bin)
 * [Hackspace raspberrypi.org](https://hackspace.raspberrypi.org/articles/space-of-the-month-radiona) Space of the Month: Radiona
