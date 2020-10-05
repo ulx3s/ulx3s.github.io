@@ -8,6 +8,14 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg )
 
+## Quicstart ( Blink LED )
+
+* https://github.com/ulx3s/quick-start
+
+## Manual
+
+* https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md
+
 ## Projects and Examples:
 
 * [6502](https://github.com/emeb/ulx3s_6502) Simple 6502 system on a ULX3S FPGA board using Trellis, Yosys, and Nextpnr
