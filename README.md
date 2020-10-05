@@ -8,7 +8,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg )
 
-## Quicstart ( Blink LED )
+## Quickstart ( Blink LED )
 
 * https://github.com/ulx3s/quick-start
 
