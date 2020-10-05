@@ -10,11 +10,11 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Quickstart ( Blink LED )
 
-* https://github.com/ulx3s/quick-start
+* [Quickstart](https://github.com/ulx3s/quick-start)
 
 ## ULX3S manual
 
-* https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md
+* [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 
 ## Projects and Examples:
 
