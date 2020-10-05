@@ -10,7 +10,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ## Quickstart ( Blink LED )
 
-* [Quickstart](https://github.com/ulx3s/quick-start)
+* [Quickstart](https://github.com/ulx3s/blink)
 
 ## ULX3S manual
 
