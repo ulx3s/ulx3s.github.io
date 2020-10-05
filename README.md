@@ -96,7 +96,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Atari Age](https://atariage.com/forums/topic/297797-ti-992-on-a-fpga-available/) Announcing a TI-99/2 on a FPGA
 
 ## Blogs Featuring the ULX3S
-* [Alexander Lang](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
+* [The Answer is 42](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
 * [Bedroom Coders](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/) ULX3S (ECP5 FPGA) first look
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
 * [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
