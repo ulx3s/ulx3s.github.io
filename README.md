@@ -14,7 +14,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 * [PMOD Quickstart](https://github.com/goran-mahovlic/PMOD-quickstart)
 
-* [SD card inserting] (https://www.youtube.com/watch?v=QYzq0DU_BXU)
+* [SD card inserting](https://www.youtube.com/watch?v=QYzq0DU_BXU)
 
 ## ULX3S manual
 
