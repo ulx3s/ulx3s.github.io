@@ -12,6 +12,8 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 * [Quickstart](https://github.com/ulx3s/blink)
 
+* [PMOD Quickstart](https://github.com/goran-mahovlic/PMOD-quickstart)
+
 ## ULX3S manual
 
 * [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
@@ -136,5 +138,19 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 
 More links on [RadionaOrg/ulx3s-links](https://github.com/RadionaOrg/ulx3s-links)
+
+## Chat and support
+
+### Discord chanel
+
+    https://discord.gg/qwMUk6W (problems/question/general chat)
+
+### Gitter chanel
+
+    https://gitter.im/ulx3s/Lobby (Focused on development)
+
+### Email
+
+    ulx3s.fpga@gmail.com (If you do not use chats)
 
 [Improve this doc](https://github.com/ulx3s/ulx3s.github.io). Hosted by [pages.github.com/](https://pages.github.com/). View at [https://ulx3s.github.io](https://ulx3s.github.io)
