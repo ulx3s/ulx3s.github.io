@@ -12,7 +12,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 * [Quickstart](https://github.com/ulx3s/blink)
 
-* [PMOD Quickstart](https://github.com/goran-mahovlic/PMOD-quickstart)
+* [Extensions Quickstart](https://github.com/goran-mahovlic/ulx3s-extension-quickstart)
 
 * [SD card inserting](https://www.youtube.com/watch?v=QYzq0DU_BXU)
 
