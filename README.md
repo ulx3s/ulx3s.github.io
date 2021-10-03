@@ -56,6 +56,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Phoenix Arcade](https://github.com/emard/vhdl_phoenix) emard's Phoenix (Amstar) FPGA - DAR - 2016 (Educational use only)
 * [PMODS - Goran](https://github.com/goran-mahovlic/ulx3s-PMOD) HDMI, I2S, LoRa, MAX31855, MLX90640, OV7670, PS2, USB, SD, and more!
 * [RDS Modulator](https://github.com/emard/rdsfpga) RDS modulator for FPGA; This code comes complete with FM transmitter. No external components are needed.
+* [Risc-V 32 Implementation in VHDL](https://github.com/stnolting/neorv32) The NEORV32 RISC-V Processor, See [this contribution](https://github.com/RadionaOrg/ulx3s-links/pull/4).
 * [SaxonSoc Linux Build](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc), see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23) all based on [SpinalHDL/SaxonSoc](https://github.com/SpinalHDL/SaxonSoc)
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
