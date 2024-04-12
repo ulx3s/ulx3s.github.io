@@ -41,6 +41,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) GHDL ULX3S Examples - simple VHDL examples using open source VHDL synthesis
 * [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror) HDMI IN >> HDMI OUT with PMOD
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
+* [KianV Risc-V Linux Soc](https://github.com/splinedrive/kianRiscV) KianV RV32IMA SV32 zicntr Linux SoC.
 * [LED Panel](https://github.com/goran-mahovlic/prjtrellis-led64x64) Example for 64x64 LED panel
 * [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
 * [Logic Analyzer Video](https://www.youtube.com/watch?v=I_yYem0Nowc)
