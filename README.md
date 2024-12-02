@@ -33,6 +33,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Cosmac Elf](https://github.com/lawrie/FPGACosmacELF/tree/master/ulx3s) This is a re-creation of a Cosmac ELF computer, Coded in SpinalHDL
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
+* [Doom-chip](https://github.com/sylefeb/Silice/tree/master/projects/doomchip) The Doom-chip, a hardware recreation of the Doom renderloop written in the Silice HDL.
 * [ESP32 passthru](https://github.com/emard/ulx3s-passthru) essential for ESP32. See also [these details](https://github.com/ulx3s/ulx3s-examples/blob/master/passthru/README.md)
 * [f32c](https://github.com/f32c/f32c) retargetable, scalar, pipelined, 32-bit processor core which can execute subsets of either RISC-V or MIPS
 * [FM Flea Radio](https://github.com/emard/flearadio) FM radio receiver for FPGA with simple RLC network and analog comparator (available on-chip, no ADC required).
