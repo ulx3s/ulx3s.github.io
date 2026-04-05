@@ -6,7 +6,17 @@ This is the home of all the awesome repos and forks of community projects that c
 
 Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
-![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg )
+![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg)
+
+## Enclosure
+
+3D Print an enclosure for your ULX3S with a 7 ince HDMI display! See <https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure>
+
+![ulx3s-hdmi-enclosure-elecrow-7inch-main-banner.png](./images/ulx3s-hdmi-enclosure-elecrow-7inch-main-banner.png)
+
+## Instructions
+
+See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the SD card.
 
 ## Quickstart ( Blink LED )
 
@@ -20,11 +30,11 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 * [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 
-## Projects and Examples:
+## Projects and Examples
 
 * [6502](https://github.com/emeb/ulx3s_6502) Simple 6502 system on a ULX3S FPGA board using Trellis, Yosys, and Nextpnr
-* [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [github.com/gojimmypi/ulx3s-adda](https://github.com/gojimmypi/ulx3s-adda); see also [this OSHPark Adapter Board](https://oshpark.com/shared_projects/oRTuqkeG), [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) and [notes](https://gojimmypi.blogspot.com/2019/03/ulx3s-sdr-with-alinx-adda.html) 
-* [Advanced Examples](https://github.com/emard/ulx3s-misc) emard's ADC, DVI, JTAG, OLED, ov7670, PS2, SDRAM, SPI RAM, USB and more. 
+* [AD/DA](https://github.com/ulx3s/ulx3s-adda) forked from [github.com/gojimmypi/ulx3s-adda](https://github.com/gojimmypi/ulx3s-adda); see also [this OSHPark Adapter Board](https://oshpark.com/shared_projects/oRTuqkeG), [this blog](https://gojimmypi.blogspot.com/2018/06/ad9280-ad9708-ad-da-module-for-ax.html) and [notes](https://gojimmypi.blogspot.com/2019/03/ulx3s-sdr-with-alinx-adda.html)
+* [Advanced Examples](https://github.com/emard/ulx3s-misc) emard's ADC, DVI, JTAG, OLED, ov7670, PS2, SDRAM, SPI RAM, USB and more.
 * [Amiga](https://github.com/emard/Minimig_ECS) Port of Amiga emulator "Minimig". See also [this video](https://www.youtube.com/watch?v=q0nysMydf4I)
 * [AnotherWorld Arcade](https://github.com/ulx3s/AnotherWorld_FPGA) forked from [github.com/felipesanches/AnotherWorld_FPGA](https://github.com/felipesanches/AnotherWorld_FPGA) see also [this video](https://www.youtube.com/watch?v=hFxIBoNP-_s)
 * [Apple I](https://github.com/emard/apple-one) forked from [github.com/lawrie/apple-one](https://github.com/lawrie/apple-one)
@@ -73,20 +83,22 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
 
 ## Toolchains and Utilities
+
 * [Toolchain Installer](https://github.com/ulx3s/ulx3s-toolchain/blob/master/README.md) Install everything from one script!
 * [Icestorm](http://www.clifford.at/icestorm/)
 * [Mac OS X support @kost homebrew](https://github.com/kost/homebrew-ulx3s)
 * [nextpnr](https://github.com/YosysHQ/nextpnr)
 * [project-trellis](https://github.com/SymbiFlow/prjtrellis)
-* [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32) 
+* [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32)
 * [yosys](http://www.clifford.at/yosys/)
 
-## Other ULX3S Links:
+## Other ULX3S Links
+
 * [Radiona.org](https://radiona.org/ulx3s/) and their [YouTube Channel](https://www.youtube.com/channel/UCYkEAHs8F4tvyb9Y2CcP3_w)
-* [DIY kitspace](https://kitspace.org/boards/github.com/emard/ulx3s/) 
+* [DIY kitspace](https://kitspace.org/boards/github.com/emard/ulx3s/)
 * [Davor and Goran talk about ULX3S](https://www.youtube.com/watch?v=c6ZuXwe0wpw) YouTube @dorscluc 2019
 * [emard's ULX3S PCB source](http://github.com/emard/ulx3s) in particular the [schematic](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) and [ECP5 constraint file](https://github.com/emard/ulx3s/blob/master/doc/constraints/ulx3s_v20.lpf).
-* [emard's ULX3S Quick-start binaries ](https://github.com/emard/ulx3s-bin)
+* [emard's ULX3S Quick-start binaries](https://github.com/emard/ulx3s-bin)
 * [Hackspace raspberrypi.org](https://hackspace.raspberrypi.org/articles/space-of-the-month-radiona) Space of the Month: Radiona
 * [ULX3S gitter lobby](https://gitter.im/ulx3s/Lobby)
 
@@ -103,6 +115,7 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Atari Age](https://atariage.com/forums/topic/297797-ti-992-on-a-fpga-available/) Announcing a TI-99/2 on a FPGA
 
 ## Blogs Featuring the ULX3S
+
 * [The Answer is 42](http://langster1980.blogspot.com/2019/09/ulx3s-open-source-fpga-development-board.html)
 * [Bedroom Coders](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/) ULX3S (ECP5 FPGA) first look
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
@@ -114,9 +127,11 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Hackaday](https://hackaday.com/2019/01/18/hackaday-podcast-ep2-curious-gadgets-and-the-fpga-brain-trust/) round table of who's-who in the Open Source FPGA movement discusses what's next in 2019
 
 ## Videos Featuring the ULX3S
-* [ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system 
 
-## Other FPGA Hardware Links:
+* [ReneRebe KeepItStupidSimple logic analyzer](https://www.youtube.com/watch?v=I_yYem0Nowc) RISCV based ULX3s system
+
+## Other FPGA Hardware Links
+
 * [e-Versatile Research Stick for peoples](https://github.com/cbalint13/e-verest)
 * [FOMU](https://workshop.fomu.im/en/latest/) see also [timvideos Getting Started](https://github.com/timvideos/litex-buildenv/wiki/Getting-started-with-FOMU-(an-FPGA-in-your-USB-port)), [crowdsupply.com/sutajio-kosagi/fomu](https://www.crowdsupply.com/sutajio-kosagi/fomu)
 * [Glasgow](https://github.com/GlasgowEmbedded/glasgow) see also [crowdsupply.com/1bitsquared/glasgow](https://www.crowdsupply.com/1bitsquared/glasgow)
@@ -124,8 +139,9 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Orange Crab](https://github.com/gregdavill/OrangeCrab) ECP5 DDR3 memory in a Feather form-factor
 * [TinyFPGA](https://tinyfpga.com/) see also [crowdsupply.com/tinyfpga/tinyfpga-bx](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)
 
-## Other Interesting Stuff:
-* [APIO](https://apiodoc.readthedocs.io/en/stable/) see also https://github.com/FPGAwars/apio
+## Other Interesting Stuff
+
+* [APIO](https://apiodoc.readthedocs.io/en/stable/) see also <https://github.com/FPGAwars/apio>
 * [BB3-ULX3S Integration](https://www.envox.hr/eez/bb3-ulx3s-integration/poc8-introduction.html) see also [EEZ Bench Box 3 by Envox](https://www.crowdsupply.com/envox/eez-bb3)
 * [nanoFramework - C# on the ESP32](http://docs.nanoframework.net/)
 * [Quokka Basic CLI for running C# => VHDL or Verilog transformation](https://github.com/EvgenyMuryshkin/QuokkaEvaluation)
@@ -140,7 +156,6 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 * [Verilog Syntax Highligher for Visual Stuldio](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 * [Visual Micro Ardunio IDE for the ESP32 in Visual Studio](https://www.visualmicro.com/)
 * [xobs circuitpython](https://github.com/xobs/circuitpython)
-
 
 More links on [RadionaOrg/ulx3s-links](https://github.com/RadionaOrg/ulx3s-links)
 
