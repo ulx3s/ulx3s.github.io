@@ -92,6 +92,18 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32)
 * [yosys](http://www.clifford.at/yosys/)
 
+## Tiny Tapeout
+
+Test your ASIC design on the ULX3S 
+
+* [Tiny Tapeout](https://tinytapeout.com/)
+
+There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky-verilog-template/issues/22) for the ULX3S, but a working example is available:
+
+* Use [this ULX3S template](https://github.com/ulx3s/ttsky-verilog-template/tree/ulx3s), see [ULX3S Verilog Template Pull Request](https://github.com/TinyTapeout/ttsky-verilog-template/pull/23)
+* Example ULX3S builds at [gojimmypi/ttsky-UART-FSM-TRNG-Lab/](https://github.com/gojimmypi/ttsky-UART-FSM-TRNG-Lab/), requires [updated tt-support-tools](https://github.com/TinyTapeout/tt-support-tools/pull/167) and [tt-gds-action](https://github.com/TinyTapeout/tt-gds-action/pull/47).
+* Update workflow example: [gojimmypi/dev/workflows/fpga-gojimmypi.yaml](https://github.com/gojimmypi/ttsky-UART-FSM-TRNG-Lab/blob/dev/.github/workflows/fpga-gojimmypi.yaml) 
+
 ## Other ULX3S Links
 
 * [Radiona.org](https://radiona.org/ulx3s/) and their [YouTube Channel](https://www.youtube.com/channel/UCYkEAHs8F4tvyb9Y2CcP3_w)
