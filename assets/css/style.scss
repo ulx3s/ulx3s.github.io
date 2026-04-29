@@ -1,0 +1,38 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #d0d7de;
+        background-color: #0d1117;
+    }
+
+    a {
+        color: #58a6ff;
+    }
+
+    img {
+        background-color: transparent;
+    }
+
+    code,
+    pre {
+        color: #d0d7de;
+        background-color: #161b22;
+    }
+
+    table {
+        color: #d0d7de;
+    }
+
+    th,
+    td {
+        border-color: #30363d;
+    }
+}
