@@ -173,16 +173,18 @@ More links on [RadionaOrg/ulx3s-links](https://github.com/RadionaOrg/ulx3s-links
 
 ## Chat and support
 
-### Discord chanel
+### Discord channel
 
-    https://discord.gg/qwMUk6W (problems/question/general chat)
+- [https://discord.gg/qwMUk6W](https://discord.gg/qwMUk6W) (problems/question/general chat)
 
-### Gitter chanel
+### Gitter channel
 
-    https://gitter.im/ulx3s/Lobby (Focused on development)
+- [https://gitter.im/ulx3s/Lobby](https://gitter.im/ulx3s/Lobby) (Focused on development)
 
 ### Email
 
-    ulx3s.fpga@gmail.com (If you do not use chats)
+- [ulx3s.fpga@gmail.com](ulx3s.fpga@gmail.com) (If you do not use chats)
+
+<hr />
 
 [Improve this doc](https://github.com/ulx3s/ulx3s.github.io). Hosted by [pages.github.com/](https://pages.github.com/). View at [https://ulx3s.github.io](https://ulx3s.github.io)
