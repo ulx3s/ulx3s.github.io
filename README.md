@@ -41,6 +41,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
 * [Blinky](https://github.com/DoctorWkt/ULX3S-Blinky) see also [these examples](https://github.com/emard/ulx3s-examples/tree/master/blinky) including [Diamond](https://github.com/emard/ulx3s-examples/blob/master/blinky/Diamond/README.md), [open source](https://github.com/emard/ulx3s-examples/blob/master/blinky/OpenSource/README.md) and [ESP32](https://github.com/emard/ulx3s-examples/tree/master/blinky/ESP32)
 * [Bluetooth LE heartrate sensor communication for ULX3S ESP32](https://gist.github.com/vmedea/3cc86e4711c22365f92d596b271147d4)
+* [Bonfire and eLua on ULX3S](https://bonfirecpu.eu/2020/11/23/bonfire-ulx3s.html) Simple SOC which uses only internal FPGA ressources; [bonfireprocessor/bonfire-basic-soc](https://github.com/bonfireprocessor/bonfire-basic-soc)
 * [Cosmac Elf](https://github.com/lawrie/FPGACosmacELF/tree/master/ulx3s) This is a re-creation of a Cosmac ELF computer, Coded in SpinalHDL
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
@@ -60,6 +61,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [LiteX Linux](https://github.com/litex-hub/linux-on-litex-vexriscv/tree/master/prog) Linux with VexRiscv CPU, a 32-bits Linux Capable RISC-V CPU written in Spinal HDL
 * [Logic Analyzer Video](https://www.youtube.com/watch?v=I_yYem0Nowc)
 * [Logic Sniffer](https://github.com/lawrie/Ice40LogicSniffer/tree/master/ulx3s)
+* [m6502](https://github.com/chrismoos/m6502) A compact MOS 6502 CPU implementation in SystemVerilog, designed for FPGA and ASIC deployment
 * [Micropython - ESP32](https://github.com/emard/esp32ecp5) emard's micropython running on ESP32; JTAG programming and flashing of Lattice ECP5 FPGA JTAG
 * [NES by ironsteel](https://github.com/emard/nes_ecp5) emard's fork and mods from [github.com/ironsteel/nes_ecp5](https://github.com/ironsteel/nes_ecp5)
 * [Next186 MS-DOS](https://github.com/emard/Next186) forked from [github.com/Basman74/Next186](https://github.com/Basman74/Next186)
@@ -102,7 +104,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [openFPGALoader](https://github.com/trabucayre/openFPGALoader) Universal utility for programming FPGAs. Compatible with many boards, cables and FPGA
 * [project-trellis](https://github.com/SymbiFlow/prjtrellis)
 * [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32)
-* [yosys](http://www.clifford.at/yosys/)
+* [yosys](http://www.clifford.at/yosys/) 
 
 ## Tiny Tapeout
 
@@ -115,6 +117,14 @@ There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky
 * Use [this ULX3S template](https://github.com/ulx3s/ttsky-verilog-template/tree/ulx3s), see [ULX3S Verilog Template Pull Request](https://github.com/TinyTapeout/ttsky-verilog-template/pull/23)
 * Example ULX3S builds at [gojimmypi/ttsky-UART-FSM-TRNG-Lab/](https://github.com/gojimmypi/ttsky-UART-FSM-TRNG-Lab/), requires [updated tt-support-tools](https://github.com/TinyTapeout/tt-support-tools/pull/167) and [tt-gds-action](https://github.com/TinyTapeout/tt-gds-action/pull/47).
 * Update workflow example: [gojimmypi/dev/workflows/fpga-gojimmypi.yaml](https://github.com/gojimmypi/ttsky-UART-FSM-TRNG-Lab/blob/dev/.github/workflows/fpga-gojimmypi.yaml) 
+
+### Tiny Tapeout Projects using the ULX3S
+
+* [648 Warp](https://tinytapeout.com/chips/tt08/tt_um_silice) classical tunnel effect written in [Silice](https://github.com/sylefeb/Silice/) 
+* [TheZoq2/tinytapeout02](https://gitlab.com/TheZoq2/tinytapeout02) see also [Spade Project Showcase](https://spade-lang.org/showcase/)
+* [TT08-Flame Demoscene submission](https://github.com/kbeckmann/tt08-flame.git) by Konrad Beckmann
+* [Asicle](https://github.com/htfab/asicle2) a Wordle clone in raw silicon. Originally taped out on MPW6, version 2 is a port to Tiny Tapeout
+* [One Sprite Pony](https://github.com/mole99/tt05-one-sprite-pony) This Verilog design produces SVGA 800x600 60Hz output with a background and one sprite.
 
 ## Other ULX3S Links
 
