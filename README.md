@@ -40,17 +40,20 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [Apple I](https://github.com/emard/apple-one) forked from [github.com/lawrie/apple-one](https://github.com/lawrie/apple-one)
 * [Apple II FPGA Emulator](https://github.com/ulx3s/apple2fpga/blob/master/README) forked from [github.com/emard/apple2fpga](https://github.com/emard/apple2fpga)
 * [Blinky](https://github.com/DoctorWkt/ULX3S-Blinky) see also [these examples](https://github.com/emard/ulx3s-examples/tree/master/blinky) including [Diamond](https://github.com/emard/ulx3s-examples/blob/master/blinky/Diamond/README.md), [open source](https://github.com/emard/ulx3s-examples/blob/master/blinky/OpenSource/README.md) and [ESP32](https://github.com/emard/ulx3s-examples/tree/master/blinky/ESP32)
+* [Bluetooth LE heartrate sensor communication for ULX3S ESP32](https://gist.github.com/vmedea/3cc86e4711c22365f92d596b271147d4)
 * [Cosmac Elf](https://github.com/lawrie/FPGACosmacELF/tree/master/ulx3s) This is a re-creation of a Cosmac ELF computer, Coded in SpinalHDL
 * [Docker - alpin3](https://github.com/alpin3/ulx3s) alpin3's docker images; ulx3s build environment open source
 * [Docker - dok3r](https://github.com/dok3r/ulx3s-build) dok3r's mixed open source/commercial build
 * [Doom-chip](https://github.com/sylefeb/Silice/tree/master/projects/doomchip) The Doom-chip, a hardware recreation of the Doom renderloop written in the Silice HDL.
 * [ESP32 passthru](https://github.com/emard/ulx3s-passthru) essential for ESP32. See also [these details](https://github.com/ulx3s/ulx3s-examples/blob/master/passthru/README.md)
+* [Examples from Lawrie Griffiths](https://github.com/lawrie/ulx3s_examples) many examples for basics, displays, protocols, and more.    
 * [f32c](https://github.com/f32c/f32c) retargetable, scalar, pipelined, 32-bit processor core which can execute subsets of either RISC-V or MIPS
 * [FM Flea Radio](https://github.com/emard/flearadio) FM radio receiver for FPGA with simple RLC network and analog comparator (available on-chip, no ADC required).
 * [FPGArduino](https://github.com/f32c/fpgarduino) Arduino core extensions for FPGA-based 32-bit MIPS and RISC-V soft CPU cores (f32c). See also [FPGArduino source](https://github.com/f32c/arduino), [this description](http://www.nxlab.fer.hr/fpgarduino/), [this video](https://www.youtube.com/watch?v=2DlkXjZnMjc) and [this video](https://www.youtube.com/watch?v=Q5GEMc2oYsw)
 * [Galaksija BASIC computer](https://github.com/ulx3s/galaksija) forked from [github.com/emard/galaksija](https://github.com/emard/galaksija) See [this video](https://www.youtube.com/watch?v=CR-pVxN-08k)
 * [GHDL](https://github.com/kost/ulx3s-ghdl-examples) GHDL ULX3S Examples - simple VHDL examples using open source VHDL synthesis
 * [GPDI Mirror](https://github.com/goran-mahovlic/GPDI_mirror) HDMI IN >> HDMI OUT with PMOD
+* [HDMI](https://github.com/splinedrive/my_hdmi_device.git) "my_hdmi_device" - implementation inspired by the FPGA4Fun tutorials
 * [Jupiter Ace](https://github.com/emard/jupiter_ace) A version of the Jupiter Ace for the Ulx3s using a PS/2 keyboard, and with HDMI output.
 * [KianV Risc-V Linux Soc](https://github.com/splinedrive/kianRiscV) KianV RV32IMA SV32 zicntr Linux SoC.
 * [LED Panel](https://github.com/goran-mahovlic/prjtrellis-led64x64) Example for 64x64 LED panel
@@ -70,17 +73,25 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [RDS Modulator](https://github.com/emard/rdsfpga) RDS modulator for FPGA; This code comes complete with FM transmitter. No external components are needed.
 * [Risc-V 32 Implementation in VHDL](https://github.com/stnolting/neorv32) The NEORV32 RISC-V Processor, See [this contribution](https://github.com/RadionaOrg/ulx3s-links/pull/4).
 * [SaxonSoc Linux Build](https://github.com/ulx3s/ulx3s-saxonsoc) forked from [github.com/dok3r/ulx3s-saxonsoc](https://github.com/dok3r/ulx3s-saxonsoc), see also [this release](https://github.com/dok3r/ulx3s-saxonsoc/releases/tag/v2020.02.23) all based on [SpinalHDL/SaxonSoc](https://github.com/SpinalHDL/SaxonSoc)
+* [Sega Master System for Ulx3s ECP5 FPGA](https://github.com/lawrie/ulx3s_sms.git) by the legendary Lawrie Griffiths.
 * [Slabboy](https://github.com/lawrie/slabboy) gameboy on an ST7789 display, which can't yet run Gameboy games, but can run simple assembler examples
 * [SPI Spy](https://github.com/osresearch/spispy) Flash emulation
+* [SPI Flash Emulator](https://github.com/Arisotura/spi_flash) Arisotura's FPGA-based FLASH emulator
 * [Synth-o-Wheel](https://github.com/emard/synthowheel) True polyphonic additive synthesizer as parametric VHDL core with realtime performance.
 * [ST7789 display](https://github.com/emard/st7789py_mpy) slow MicroPython driver for 240x240 ST7789 display without CS pin from Ali Express
 * [TI-99](https://github.com/emard/ti99_2) A never released home computer in the TI-99/4A family, implemented on the ULX3S fpga board. See also [TI99/2](https://gitlab.com/pnru/ti99/tree/master/ti99_2)
-* [Tic tac toe](https://github.com/emard/Verilog_tic-tac-toe) This is an implementation of "Tic Tac Toe" (noughts and crosses) in Verilog. The user plays against the FPGA
+* [Tic tac toe from emard](https://github.com/emard/Verilog_tic-tac-toe) This is an implementation of "Tic Tac Toe" (noughts and crosses) in Verilog. The user plays against the FPGA
+* [Tic Tac Toe from DoctorWkt](https://github.com/DoctorWkt/Verilog_tic-tac-toe.git) An implementation of "Tic Tac Toe" in Verilog. FPGA versus user, FPGA knows how to win!
 * [Tools](https://github.com/f32c/tools) F32C JTAG programmer, ujprog, f32cup binary uploader
+* [TRS 80 Model 1 Verilog implementation for the Ulx3s ECP5 board](https://github.com/lawrie/ulx3s_trs_80.git)
 * [UK101](https://github.com/emard/UK101onFPGA) emard's UK101 on FPGA (see also [Orao](https://github.com/emard/UK101onFPGA))
 * [WiFi JTAG](https://github.com/emard/WiFiJTAG) see also [this video](https://www.youtube.com/watch?v=cgYtZW4zPSI)
 * [YAZSOF Z80](https://github.com/chriscamacho/YAZSOF) chriscamacho's Yet Another Z80 SoC On FPGA
 * [ZX80/81 Soft Z80](https://github.com/ulx3s/ulx3s_zx81) forked from [github.com/lawrie/ulx3s_zx8](https://github.com/lawrie/ulx3s_zx81) WIP!
+
+## Gitee examples (China's answer to GitHub)
+
+* [FemtoRV ULX3S tutorial](https://gitee.com/ynxing/learn-fpga/blob/master/FemtoRV/TUTORIALS/ULX3S.md) ULX3S RISC-V tutorial flow
 
 ## Toolchains and Utilities
 
@@ -88,6 +99,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [Icestorm](http://www.clifford.at/icestorm/)
 * [Mac OS X support @kost homebrew](https://github.com/kost/homebrew-ulx3s)
 * [nextpnr](https://github.com/YosysHQ/nextpnr)
+* [openFPGALoader](https://github.com/trabucayre/openFPGALoader) Universal utility for programming FPGAs. Compatible with many boards, cables and FPGA
 * [project-trellis](https://github.com/SymbiFlow/prjtrellis)
 * [ujprog](https://github.com/f32c/tools) see also emard's [quick start binaries](https://github.com/emard/ulx3s-bin) for [Mac](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/apple), [Linux](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-amd64), [RPi](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/linux-rpi3), and [Windows](https://github.com/emard/ulx3s-bin/tree/master/usb-jtag/win32)
 * [yosys](http://www.clifford.at/yosys/)
@@ -117,6 +129,7 @@ There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky
 ## Articles Featuring the ULX3S
 
 * [BedroomCoders - ULX3S (ECP5 FPGA) first look](http://bedroomcoders.co.uk/ulx3s-ecp5-fpga-first-look/)
+* [Beginning FPGA Graphics](https://projectf.io/posts/fpga-graphics/) Project F's excellent tutorial on FPGA graphics, using the ULX3S as the target platform.
 * [CNX Software - ULX3S Education Board is Powered by Lattice Semi ECP5 FPGA & ESP32 WiFi/BLE Module](https://www.cnx-software.com/2019/08/30/ulx3s-education-board-is-powered-by-lattice-semi-ecp5-fpga-esp32-wifi-ble-module/)
 * [ee News Embedded - Lattice ECP5 FPGA board for open-source development October 28, 2019](https://www.eenewsembedded.com/news/lattice-ecp5-fpga-board-open-source-development)
 * [Hackaday - ULX3S: An open-source Lattice ECP5 FPGA PCB January 14, 2019](https://hackaday.com/2019/01/14/ulx3s-an-open-source-lattice-ecp5-fpga-pcb/)
@@ -133,6 +146,8 @@ There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky
 * [gojimmypi](https://gojimmypi.blogspot.com/2019/02/ulx3s-day-1.html), [Icestudio](https://gojimmypi.blogspot.com/2019/12/ulx3s-and-icestudio.html), [Visual Micro](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html), [yosys notes](https://gojimmypi.blogspot.com/2019/02/notes-on-ulx3s-fpga-yosys-verilog-vhdl.html), [ujprog on Windows/WSL](https://gojimmypi.blogspot.com/2019/02/ulx3s-ujprog-on-windows-wsl-or-minggw.html), [etc.](https://gojimmypi.blogspot.com/search/label/ULX3S)
 * [Goran - lemilica](http://lemilica.com/?s=ulx3s) Doing ULX3ST FPGA board @home
 * [TTN forum](https://www.thethingsnetwork.org/forum/t/ulx3s-fpga-board-sends-first-message-to-ttn/19384/4) ULX3S FPGA board sends first message to TTN
+* [Lawrie Griffith's "Retro computing on the Ulx3s ECP5 FPGA board"](https://github.com/lawrie/ulx3s_retro)
+* [SSH to ULX3S Espressif ESP32 with wolfSSH](https://gojimmypi.github.io/SSH-to-ULX3S-ESP32/)
 
 ## Podcasts
 
@@ -160,6 +175,7 @@ There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky
 * [Icestorm](http://www.clifford.at/icestorm/)
 * [Icestudio](https://icestudio.io/) see also [github.com/FPGAwars/icestudio](https://github.com/FPGAwars/icestudio)
 * [Linux on LiteX VexRiscv](https://github.com/litex-hub/linux-on-litex-vexriscv)
+* [LiteX framework](https://github.com/enjoy-digital/litex) provides a convenient and efficient infrastructure to create FPGA Cores/SoCs
 * [picorv32 - rxrbln](https://github.com/rxrbln/picorv32) PicoRV32 - A Size-Optimized RISC-V CPU
 * [RISC-V on the tinyFPGA](https://discourse.tinyfpga.com/t/riscv-example-project-on-tinyfpga-bx/451) see also [this blog](https://gojimmypi.blogspot.com/2019/01/risc-v-on-fpga-tinyfpga-via-wsl.html)
 * [sigrok](https://sigrok.org/wiki/Main_Page)
