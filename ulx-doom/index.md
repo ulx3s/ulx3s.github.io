@@ -7,7 +7,7 @@ Doom on the ULX3S 85F and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU
 
 |  |
 |:------:|
-| [<img src="./ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) |
+| [<img src="./ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI)<br 
 | [youtube.com/shorts/4TTZ9huWvjI](https://www.youtube.com/shorts/4TTZ9huWvjI) |
 
 See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` branch of [Hazard3 Fork](https://github.com/ulx3s/Hazard3/tree/ulx-doom).
@@ -404,14 +404,14 @@ Traceback (most recent call last):
 
 ## Learn More
 
-- Stable ULX Hazard3-Doom: https://github.com/ulx3s/Hazard3-Doom
-- ULX forked Hazard3 RISC-V [submodule](https://github.com/ulx3s/Hazard3-Doom/tree/main/third_party) from https://github.com/ulx3s/Hazard3
-- Doomgeneric [submodule](https://github.com/ulx3s/Hazard3-Doom/tree/main/third_party) from: https://github.com/ozkl/doomgeneric
-- HDMI Enclosure: https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure
-- Tigard: https://github.com/tigard-tools/tigard
-- The gojimmypi dev branch: https://github.com/gojimmypi/Hazard3/tree/ulx3s-dev
-- Visual Studio File Explorer: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WorkflowBrowser
-- Visual Studio Verilog Syntax Highlighter: https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension
+- Stable ULX Hazard3-Doom: [github.com/ulx3s/Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom)
+- ULX forked Hazard3 RISC-V [submodule](https://github.com/ulx3s/Hazard3-Doom/tree/main/third_party) from [github.com/ulx3s/Hazard3](https://github.com/ulx3s/Hazard3/tree/ulx-doom)
+- Doomgeneric [submodule](https://github.com/ulx3s/Hazard3-Doom/tree/main/third_party) from: [github.com/ozkl/doomgeneric](https://github.com/ozkl/doomgeneric)
+- HDMI Enclosure: [github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure](https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure)
+- Tigard: [github.com/tigard-tools/tigard](https://github.com/tigard-tools/tigard)
+- The gojimmypi dev branch: [github.com/gojimmypi/Hazard3/ulx3s-dev](https://github.com/gojimmypi/Hazard3/tree/ulx3s-dev)
+- Visual Studio [File Explorer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WorkflowBrowser)
+- Visual Studio [Verilog Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 
 ---
 
