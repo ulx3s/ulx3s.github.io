@@ -169,12 +169,13 @@
         color: var(--code-blue);
     }
 
-    table {
+    .markdown-body table:not(.rouge-table),
+    .markdown-body table:not(.rouge-table) tr,
+    .markdown-body table:not(.rouge-table) tr:nth-child(2n),
+    .markdown-body table:not(.rouge-table) th,
+    .markdown-body table:not(.rouge-table) td {
         color: #d0d7de;
-    }
-
-    th,
-    td {
+        background: #161b22;
         border-color: #30363d;
     }
 }
