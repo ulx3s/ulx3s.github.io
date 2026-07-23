@@ -36,15 +36,22 @@
     code,
     pre,
     .highlight,
-    .highlighter-rouge .highlight {
+    .highlighter-rouge .highlight,
+    .markdown-body code,
+    .markdown-body pre,
+    .markdown-body .highlight,
+    .markdown-body .highlight pre,
+    .markdown-body .highlighter-rouge .highlight {
         color: var(--code-foreground);
-        background-color: var(--code-background);
+        background: var(--code-background);
     }
 
     pre code,
-    .highlight pre {
+    .highlight pre code,
+    .markdown-body pre code,
+    .markdown-body .highlight pre code {
         color: inherit;
-        background-color: transparent;
+        background: transparent;
     }
 
     .highlight table,
