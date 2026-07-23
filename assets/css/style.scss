@@ -8,6 +8,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --code-background: #161b22;
+        --code-foreground: #e6edf3;
+        --code-muted: #8b949e;
+        --code-blue: #79c0ff;
+        --code-green: #7ee787;
+        --code-orange: #ffa657;
+        --code-purple: #d2a8ff;
+        --code-red: #ff7b72;
+        --code-string: #a5d6ff;
+    }
+
     body {
         color: #d0d7de;
         background-color: #0d1117;
@@ -22,9 +34,132 @@
     }
 
     code,
-    pre {
-        color: #d0d7de;
-        background-color: #161b22;
+    pre,
+    .highlight,
+    .highlighter-rouge .highlight {
+        color: var(--code-foreground);
+        background-color: var(--code-background);
+    }
+
+    pre code,
+    .highlight pre {
+        color: inherit;
+        background-color: transparent;
+    }
+
+    .highlight table,
+    .highlight tbody,
+    .highlight tr,
+    .highlight td {
+        background-color: transparent;
+        border-color: #30363d;
+    }
+
+    /* Rouge syntax highlighting: GitHub-compatible dark palette. */
+    .highlight .c,
+    .highlight .ch,
+    .highlight .cd,
+    .highlight .cm,
+    .highlight .cp,
+    .highlight .cpf,
+    .highlight .c1,
+    .highlight .cs,
+    .highlight .go,
+    .highlight .w {
+        color: var(--code-muted);
+    }
+
+    .highlight .err,
+    .highlight .gr,
+    .highlight .gt {
+        color: #f85149;
+        background-color: transparent;
+    }
+
+    .highlight .k,
+    .highlight .kc,
+    .highlight .kd,
+    .highlight .kn,
+    .highlight .kp,
+    .highlight .kr,
+    .highlight .kt,
+    .highlight .o,
+    .highlight .ow {
+        color: var(--code-red);
+    }
+
+    .highlight .m,
+    .highlight .mb,
+    .highlight .mf,
+    .highlight .mh,
+    .highlight .mi,
+    .highlight .il,
+    .highlight .mo,
+    .highlight .na,
+    .highlight .nb,
+    .highlight .bp,
+    .highlight .no,
+    .highlight .nv,
+    .highlight .vc,
+    .highlight .vg,
+    .highlight .vi,
+    .highlight .vm {
+        color: var(--code-blue);
+    }
+
+    .highlight .s,
+    .highlight .sa,
+    .highlight .sb,
+    .highlight .sc,
+    .highlight .dl,
+    .highlight .sd,
+    .highlight .s1,
+    .highlight .s2,
+    .highlight .se,
+    .highlight .sh,
+    .highlight .si,
+    .highlight .sr,
+    .highlight .ss,
+    .highlight .sx {
+        color: var(--code-string);
+    }
+
+    .highlight .nc,
+    .highlight .nd,
+    .highlight .ne,
+    .highlight .nf,
+    .highlight .fm,
+    .highlight .nl,
+    .highlight .nn,
+    .highlight .nx,
+    .highlight .py {
+        color: var(--code-purple);
+    }
+
+    .highlight .nt {
+        color: var(--code-green);
+    }
+
+    .highlight .ni,
+    .highlight .sx,
+    .highlight .ss,
+    .highlight .gp {
+        color: var(--code-orange);
+    }
+
+    .highlight .gd {
+        color: #ffa198;
+        background-color: rgba(248, 81, 73, 0.15);
+    }
+
+    .highlight .gi {
+        color: #aff5b4;
+        background-color: rgba(46, 160, 67, 0.15);
+    }
+
+    .highlight .gh,
+    .highlight .gu {
+        color: var(--code-blue);
     }
 
     table {
