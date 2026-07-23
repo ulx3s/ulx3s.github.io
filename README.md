@@ -18,13 +18,15 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the SD card.
 
-## Quickstart ( Blink LED )
+## Quickstart
 
-* [Quickstart](https://github.com/ulx3s/blink)
+* [Quickstart](https://github.com/ulx3s/blink)  ( Blink LED )
 
 * [Extensions Quickstart](https://github.com/goran-mahovlic/ulx3s-extension-quickstart)
 
 * [SD card inserting](https://www.youtube.com/watch?v=QYzq0DU_BXU)
+
+* [JTAG Doom on the Hazard3 soft RISC-V](https://ulx3s.github.io/ulx-doom/) (also works on ULX4M-LD)
 
 ## ULX3S manual
 
