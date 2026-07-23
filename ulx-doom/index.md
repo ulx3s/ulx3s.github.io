@@ -11,10 +11,10 @@ See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` bra
 
 Conceptually:
 
-- Configure the FPGA with the Hazard3 RISC-V SoC bitstream.
-- Load monitor/loader firmware that accepts uploads over UART.
-- Upload the packaged Doom image from the host computer.
-- Upload a compatible Doom IWAD containing the game data.
+- Configure the FPGA with the Hazard3 RISC-V SoC bitstream (`FTDI` drivers).
+- Load monitor/loader firmware that accepts uploads over UART (`libusbK` drivers).
+- Upload the packaged Doom image from the host computer (UART listener in monitor/loader).
+- Upload a compatible Doom IWAD containing the game data (UART listener in monitor/loader).
 - Optionally connect to the console with a terminal program and test memory, etc.
 - Optionally single-step debug a program running on the soft RISC-V CPU using `gdb` or [VisualGDB](https://visualgdb.com/).
 
@@ -194,7 +194,14 @@ Run the OpenOCD server in a dedicated terminal window:
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
 
+# Set debug level 2
 ./bin/openocd.exe -d2 -f ./third_party/Hazard3/example_soc/ulx3s-openocd.cfg
+```
+
+Or from a DOS prompt:
+
+```dos
+.\bin\openocd.exe -f ".\third_party\Hazard3\example_soc\ulx3s-openocd.cfg"
 ```
 
 Expect output like this:
@@ -274,7 +281,7 @@ The LEDs on the ULX3S should start blinking after the firmware loads successfull
 
 This step requires the monitor/loader firmware loaded with GDB in the previous section and the Doom image created during the build.
 
-The ULX3S requires an external USB-to-UART adapter connected as shown:
+The ULX3S requires an external 3v3 USB-to-UART adapter connected as shown:
 
 [<img src="./ULX3S-External-UART.jpg" alt="Picture of ULX3S and external USB-to-UART adapter" width="300">](./ULX3S-External-UART.jpg)
 
@@ -360,6 +367,17 @@ cd "${WORKSPACE}/Hazard3-Doom"
 
 Here are some common troubleshooting suggestions.
 
+#### Timed out waiting for loader response
+
+The `hazard3-test.elf` (either prebuilt in `./bin/` or fresh build in `./build`) Console Monitor
+must be loaded onto the device before loading Doom via the python scripts, otherwise this error is expected:
+
+```text
+$ ./doom/upload-doom-image.py  ./build/doom-image/hazard3-doom.h3d  --port /dev/ttyS7
+Opening /dev/ttyS7 at 115200; payload=586272, CRC32=0xc94f45cf
+error: timed out waiting for loader response
+```
+
 #### Missing required executable
 
 Ensure the scripts are marked as executable if an error such as this is encountered:
@@ -381,7 +399,9 @@ chmod +x ./scripts/build-ulx3s-85f-bitstream.sh
 
 #### Error ft232r not found
 
-Ensure the ULX3S is using the `libusbK` driver. This error occurs when OpenOCD tries to use the default FTDI driver on Windows:
+Ensure the ULX3S is using the `libusbK` driver when running OpenOCD. Use Zadig to change from `FTDI` (Windows default) as needed.
+
+This error occurs when OpenOCD tries to use the default FTDI driver on Windows:
 
 ```text
 $ ./bin/openocd.exe -d2 -f ./third_party/Hazard3/example_soc/ulx3s-openocd.cfg
@@ -397,6 +417,40 @@ Error: ft232r not found: vid=0403, pid=6015, serial=[any]
 Traceback (most recent call last):
   File "./third_party/Hazard3/example_soc/ulx3s-openocd.cfg", line 40, in script
     init
+```
+
+#### Cannot find JTAG cable
+
+After changing drivers the ULX3S is still not recognized by `fuprog`: try unplugging, wait 30 seconds, plug back into USB.
+Confirm withZadig that the drivers are as desired (FTDI for FPGA bitstream, `libusbK` for JTAG debug).
+
+```
+ULX2S / ULX3S JTAG programmer v4.8 (git 96ebb45 built Oct  7 2020 22:42:00)
+Copyright (C) Marko Zec, EMARD, gojimmypi, kost and contributors
+FT_Open() failed
+Cannot find JTAG cable.
+```
+
+#### Error: could not open port Access is denied
+
+The scripts must have exclusive access to the serial ports. If anything else is connected, an error like this may occur:
+
+```
+C:\temp\Hazard3-Doom>py .\doom\upload-doom-image.py .\bin\hazard3-doom.h3d --port COM7
+Opening COM7 at 115200; payload=586272, CRC32=0xc94f45cf
+error: could not open port 'COM7': PermissionError(13, 'Access is denied.', None, 5)
+```
+The error above may also occur if the `Tx` or `Rx` pins do not have a good electrical connection. It is recommends to
+also connected the TTY/USB Ground write, but *NOT* any power pins. Use Vcc=3v3 only
+
+#### No such file or directory: DOOM1.WAD
+
+A Doom wad file is not distributed in this repository. Find a Doom WAD file, such as the `doom_dos.ZIP/DOOM1.WAD` 
+in the [DOOM v1.9 (Shareware Episode, 1995)](https://archive.org/details/doom_20230531) zip download.
+
+```text
+py ./doom/upload-wad.py ./wads/DOOM1.WAD --port COM7 --launch
+error: [Errno 2] No such file or directory: 'wads\\DOOM1.WAD'
 ```
 
 ## Learn More
