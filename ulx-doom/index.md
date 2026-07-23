@@ -2,9 +2,13 @@
 
 Doom on the ULX3S 85F and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU with JTAG single-step debug capabilities.
 
-[<img src="./ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) 
-<br />
- https://www.youtube.com/shorts/4TTZ9huWvjI 
+
+
+
+|  |
+|:------:|
+| [<img src="./ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) |
+| [youtube.com/shorts/4TTZ9huWvjI](https://www.youtube.com/shorts/4TTZ9huWvjI) |
 
 See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` branch of [Hazard3 Fork](https://github.com/ulx3s/Hazard3/tree/ulx-doom).
 
