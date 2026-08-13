@@ -75,6 +75,8 @@ done
 Windows users can download the [RISC-V toolchain](https://gnutoolchains.com/risc-v/) from Sysprogs,
 or use the files in [Hazard3-Doom/bin](https://github.com/ulx3s/Hazard3-Doom/tree/main/bin).
 
+Users of VisualGDB can proceed with the [ulx3s/Hazard3-Doom/VisualGDB/](https://github.com/ulx3s/Hazard3-Doom/blob/main/VisualGDB/README.md) instructions.
+
 Linux users can bake their own cake.
 
 ### Build
@@ -233,6 +235,14 @@ Warn : not enough working area available(requested 1100)
 Info : dropped 'gdb' connection
 ```
 
+If OpenOCD is already running, you may need to kill it first:
+
+```dos
+REM DOS/Windows:
+taskkill /F /IM openocd.exe 2>nul
+netstat -ano | findstr LISTENING | findstr :3333
+```
+
 The final working-memory messages may appear when GDB compares sections. They do not indicate a failed firmware load if `load` and `compare-sections` completed successfully.
 
 ### Load Firmware with GDB
@@ -272,7 +282,7 @@ Or use the `load_firmware.sh` script:
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
 
-./scripts/load_firmware.sh
+./scripts/load-firmware.sh
 ```
 
 The LEDs on the ULX3S should start blinking after the firmware loads successfully. The program listens on the UART port for Doom image and IWAD uploads.
@@ -453,6 +463,21 @@ py ./doom/upload-wad.py ./wads/DOOM1.WAD --port COM7 --launch
 error: [Errno 2] No such file or directory: 'wads\\DOOM1.WAD'
 ```
 
+#### Warning No such file or directory
+
+Compile in WSL and load firmware with DOS to encounter this error.
+
+```
+Running RISC-V GDB...
+
+GDB: "C:\temp\Hazard3-Doom\bin\gdb\riscv-none-elf-gdb.exe"
+ELF: "C:\temp\Hazard3-Doom\build\hazard3-test.elf"
+uart_getc_nonblocking (value=<synthetic pointer>) at /mnt/c/temp/Hazard3-Doom/src/main.c:250
+warning: 250    /mnt/c/temp/Hazard3-Doom/src/main.c: No such file or directory
+```
+
+Note that `/mnt/c/` is from WSL and is not a valid path in DOS.
+
 ## Learn More
 
 - Stable ULX Hazard3-Doom: [github.com/ulx3s/Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom)
@@ -463,6 +488,7 @@ error: [Errno 2] No such file or directory: 'wads\\DOOM1.WAD'
 - The gojimmypi dev branch: [github.com/gojimmypi/Hazard3/ulx3s-dev](https://github.com/gojimmypi/Hazard3/tree/ulx3s-dev)
 - Visual Studio [File Explorer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WorkflowBrowser)
 - Visual Studio [Verilog Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
+- [Another tale of building a Doom port for RISC-V](https://armaangomes.com/blogs/doom/)
 
 ---
 
