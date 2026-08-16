@@ -8,11 +8,21 @@ Now live on [Crowd Supply](https://www.crowdsupply.com/radiona/ulx3s)!
 
 ![ulx3s-v303-ax-top_png_project-main.jpg](./images/ulx3s-v303-ax-top_png_project-main.jpg)
 
-## Enclosure
+## HDMI Enclosure
 
-3D Print an enclosure for your ULX3S with a 7 ince HDMI display! See <https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure>
+3D Print an enclosure for your ULX3S with a 7 inch HDMI display! See <https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure>
 
 ![ulx3s-hdmi-enclosure-elecrow-7inch-main-banner.png](./images/ulx3s-hdmi-enclosure-elecrow-7inch-main-banner.png)
+
+Or Download the from your favorite 3D Printing library:
+
+- [cults3d.com](https://cults3d.com/en/3d-model/various/ulx3s-hdmi-enclosure-for-the-elecrow-7-inch-display)
+- [printables.com](https://www.printables.com/model/1794673-ulx3s-elecrow-7-inch-hdmi-display-enclosure)
+- [myminifactory.com](https://www.myminifactory.com/object/3d-print-3d-printable-ulx3s-enclosure-for-the-elecrow-7-inch-hdmi-display-827436)
+
+## OLED Enclosure
+
+- [ULX3S Case (OLED/LCD Supported)](https://www.printables.com/model/454181-ulx3s-case-oledlcd-supported)
 
 ## Instructions
 
