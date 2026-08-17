@@ -4,7 +4,7 @@ Doom on the ULX3S 85F and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU
 
 |  |
 |:------:|
-| [<img src="./ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) |
+| [<img src="./images/ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) |
 | [youtube.com/shorts/4TTZ9huWvjI](https://www.youtube.com/shorts/4TTZ9huWvjI) |
 
 See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` branch of [Hazard3 Fork](https://github.com/ulx3s/Hazard3/tree/ulx-doom).
@@ -38,6 +38,15 @@ git clone --recurse-submodules https://github.com/ulx3s/Hazard3-Doom.git
 cd Hazard3-Doom
 ```
 
+Or when testing a specific branch:
+
+```bash
+git clone \
+    --branch develop \
+    --recurse-submodules \
+    https://github.com/gojimmypi/Hazard3-Doom.git
+```
+
 When cloning onto a Windows filesystem from WSL, disable automatic line-ending conversion and file-mode tracking:
 
 ```bash
@@ -49,6 +58,14 @@ cd Hazard3-Doom
 
 git config core.autocrlf false
 git config core.filemode false
+```
+
+### Ensure submodules are current
+
+For an existing clone directory:
+
+```
+git submodule update --init --recursive
 ```
 
 ### Check Build Tools
@@ -103,6 +120,9 @@ cd "${WORKSPACE}/Hazard3-Doom"
 
 Use `fujprog` or `openFPGALoader` to load the FPGA bitstream into SRAM. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
 
+If the Doom files are loaded on the SD card, an HDMI test pattern should appear and then 
+shortly later Doom should launch once the FPGA bitstream is loaded. (see [Load SD Card](./index.html#load-sd-card), below) 
+
 #### Program the ULX3S with fujprog from WSL
 
 A bitstream file should have been created in the `${WORKSPACE}/Hazard3-Doom/build/ulx3s` directory.
@@ -129,6 +149,8 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ```
 
 ### OpenOCD
+
+This step is not require when loading from the SD Card. (see [Load SD Card](./index.html#load-sd-card), below)
 
 The following instructions are specific to the ULX3S. This example uses [OpenOCD](https://www.openocd.org/) to load firmware for the RISC-V soft CPU.
 
@@ -247,6 +269,8 @@ The final working-memory messages may appear when GDB compares sections. They do
 
 ### Load Firmware with GDB
 
+This step is not require when loading from the SD Card. (see [Load SD Card](./index.html#load-sd-card), below)
+
 Load the monitor/loader firmware image with GDB. OpenOCD must already be running.
 
 GDB can be downloaded from the [xPack GNU RISC-V Embedded GCC releases](https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack/releases/), or
@@ -289,11 +313,13 @@ The LEDs on the ULX3S should start blinking after the firmware loads successfull
 
 ### Load Doom Executable
 
+This step is not require when loading from the SD Card. (see [Load SD Card](./index.html#load-sd-card), below)
+
 This step requires the monitor/loader firmware loaded with GDB in the previous section and the Doom image created during the build.
 
 The ULX3S requires an external 3v3 USB-to-UART adapter connected as shown:
 
-[<img src="./ULX3S-External-UART.jpg" alt="Picture of ULX3S and external USB-to-UART adapter" width="300">](./ULX3S-External-UART.jpg)
+[<img src="./images/ULX3S-External-UART.jpg" alt="Picture of ULX3S and external USB-to-UART adapter" width="300">](./images/ULX3S-External-UART.jpg)
 
 Load the Doom image:
 
@@ -313,6 +339,8 @@ py ./doom/upload-doom-image.py ./build/doom-image/hazard3-doom.h3d --port COM7
 
 ### Load a WAD
 
+This step is not required when loading from the SD Card. (see [Load SD Card](./index.html#load-sd-card), below)
+
 The ULX3S uses the external USB-to-UART adapter shown in the previous step. Place a compatible IWAD, such as `DOOM1.WAD`, in the `wads` directory before uploading it.
 
 ```bash
@@ -326,6 +354,24 @@ For Windows, depending on the specific serial port:
 ```powershell
 py ./doom/upload-wad.py ./wads/DOOM1.WAD --port COM7 --launch
 ```
+
+### Load SD Card
+
+When using the ULX3S SD Card, for instance formatted in Windows like this 
+(note FAT32 file system)
+
+![Windows HAZARD3 SD volume](./images/Windows-HAZARD3-SD-volume.png)
+
+Doom files can be copied to the root of the SD card, named exactly:
+
+- `FPGA.BIT`
+- `DOOM.H3D`
+- `DOOM.WAD`
+
+For example, like this:
+
+![HAZARD3 SD Contents](./images/HAZARD3-SD-Contents.png)
+
 
 ### Connect to Monitor Console
 
@@ -489,6 +535,51 @@ Note that `/mnt/c/` is from WSL and is not a valid path in DOS.
 - Visual Studio [File Explorer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WorkflowBrowser)
 - Visual Studio [Verilog Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 - [Another tale of building a Doom port for RISC-V](https://armaangomes.com/blogs/doom/)
+
+---
+
+## Development Status
+
+The `scripts/hazard3-doom-source-status.sh` may be helpful in determining the status of various submodule branches.
+
+Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [contributing notes](https://github.com/ulx3s/Hazard3/blob/ulx-doom/Contributing.md#pull-requests).
+
+
+### gojimmypi
+
+Active Development Compare
+
+- gojimmypi Hazard3 `ulx-doom-dev` vs release [ulx3s/Hazard3/ulx-doom ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/ulx-doom...gojimmypi:Hazard3:ulx-doom-dev?expand=1) 
+
+Hazard3 Doom Project
+
+- [ulx3s/Hazard3-Doom/main ... gojimmypi/Hazard3-Doom/develop](https://github.com/ulx3s/Hazard3-Doom/compare/main...gojimmypi:Hazard3-Doom:develop?expand=1) 
+
+Hazard3 RISC-V CPU submodule vs upstream `ulx3s/Hazard3` repository branches:
+
+- [ulx3s/Hazard3/stable ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/stable...gojimmypi:Hazard3:ulx-doom-dev?expand=1) (dev vs stable)
+- [ulx3s/Hazard3/develop ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/develop...gojimmypi:Hazard3:ulx-doom-dev?expand=1) (dev vs upstream develop, PR here)
+- [ulx3s/Hazard3/ulx-doom ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/ulx-doom...gojimmypi:Hazard3:ulx-doom-dev?expand=1) * `ulx-doom` is main production branch
+
+Hazard3 RISC-V CPU submodule vs upstream `Wren6991` repository branches:
+
+- [Wren6991/Hazard3/stable ... gojimmypi/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/stable...gojimmypi:Hazard3:ulx-doom?expand=1)
+- [Wren6991/Hazard3/develop ... gojimmypi/Hazard3/develop](https://github.com/Wren6991/Hazard3/compare/develop...gojimmypi:Hazard3:develop?expand=1)
+- [Wren6991/Hazard3/develop ... gojimmypi/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/develop...gojimmypi:Hazard3:ulx-doom?expand=1)
+
+Doom Generic
+
+- [https://github.com/gojimmypi/doomgeneric](https://github.com/gojimmypi/doomgeneric) (no gojimmypi development branches)
+
+
+### ulx3s
+
+Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [contributing notes](https://github.com/ulx3s/Hazard3/blob/ulx-doom/Contributing.md#pull-requests).
+
+- [Wren6991/Hazard3/stable ... ulx3s/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/stable...ulx3s:Hazard3:ulx-doom?expand=1)
+- [Wren6991/Hazard3/develop ... ulx3s/Hazard3/develop](https://github.com/Wren6991/Hazard3/compare/develop...ulx3s:Hazard3:develop?expand=1)
+- [Wren6991/Hazard3/develop ... ulx3s/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/develop...ulx3s:Hazard3:ulx-doom?expand=1)
+- [ozkl/doomgeneric/master ... ulx3s/doomgeneric/ulx-doom](https://github.com/ozkl/doomgeneric/compare/master...ulx3s:doomgeneric:ulx-doom?expand=1)
 
 ---
 
