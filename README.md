@@ -41,6 +41,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 ## ULX3S manual
 
 * [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
+* [Pinout label image generator](https://github.com/ulx3s/ulx3s-pinout)
 
 ## Projects and Examples
 
