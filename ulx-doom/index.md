@@ -67,6 +67,14 @@ For an existing clone directory:
 ```
 git submodule update --init --recursive
 ```
+### No Local Toolchain
+
+It is highly recommended to have the toolchain installed locally. It is however, not required.
+
+Generated binaries are included in the GitHub workflow [fpga-builds.yml](https://github.com/ulx3s/Hazard3-Doom/blob/main/.github/workflows/fpga-builds.yml)
+actions artifacts:
+
+![fpga builds artifacts](./images/fpga-builds-artifacts.png)
 
 ### Check Build Tools
 
@@ -100,7 +108,7 @@ Linux users can bake their own cake.
 
 To get started more quickly, there is a prebuilt bitstream file called `fpga_ulx3s_hdmi_doom.bit` in the [bin directory](https://github.com/ulx3s/Hazard3-Doom/tree/main/bin).
 
-To build from source:
+To build everything from source:
 
 #### Build for ULX3S 85F
 
@@ -116,9 +124,26 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ./scripts/build-ulx4m-ld-doom.sh
 ```
 
+The complex design may require `ALLOW_TIMING_FAILURE=1`
+
+```bash
+FORCE_BITSTREAM_REBUILD=1 \
+ALLOW_TIMING_FAILURE=1    \
+  ./scripts/build-ulx4m-ld-bitstream.sh
+```
+
+#### Build only Console Monitor
+
+This step is included in the "build everything" but can be run separately when the FPGA RTL does not change:
+
+```bash
+cd "${WORKSPACE}/Hazard3-Doom"
+./scripts/build.sh
+```
+
 ### Program the FPGA
 
-Use `fujprog` or `openFPGALoader` to load the FPGA bitstream into SRAM. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
+Use [web](https://ulx3s.github.io/Hazard3-Doom/) or command-line `fujprog` or `openFPGALoader` to load the FPGA bitstream into SRAM. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
 
 If the Doom files are loaded on the SD card, an HDMI test pattern should appear and then 
 shortly later Doom should launch once the FPGA bitstream is loaded. (see [Load SD Card](./index.html#load-sd-card), below) 
