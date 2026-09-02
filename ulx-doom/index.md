@@ -1,6 +1,6 @@
 # ULX-DOOM
 
-Doom on the ULX3S 85F and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU with JTAG single-step debug capabilities.
+Doom on the ULX3S 85F, ULX3S 12F, and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU with JTAG single-step debug capabilities.
 
 |  |
 |:------:|
@@ -11,16 +11,35 @@ See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` bra
 
 Conceptually:
 
-- Configure the FPGA with the Hazard3 RISC-V SoC bitstream (`FTDI` drivers).
-- Load monitor/loader firmware that accepts uploads over UART (`libusbK` drivers).
-- Upload the packaged Doom image from the host computer (UART listener in monitor/loader).
-- Upload a compatible Doom IWAD containing the game data (UART listener in monitor/loader).
-- Optionally connect to the console with a terminal program and test memory, etc.
+- Configure the FPGA with the Hazard3 RISC-V SoC bitstream. On Windows, the ULX3S on-board FT231X driver depends on the host tool: WinUSB for the browser WebUSB flasher, FTDI VCP/D2XX for Windows `fujprog`, and WinUSB or libusbK for the current OpenOCD `ft232r` path.
+- Load or update the resident monitor through OpenOCD/GDB when doing a software-only monitor build.
+- Upload the packaged Doom `.h3d` image over the separate UART connection, or load it from micro-SD.
+- Upload/use a compatible Doom IWAD containing the game data.
+- Optionally connect to the UART console with the browser Web Serial UI or a terminal program and run diagnostics.
 - Optionally single-step debug a program running on the soft RISC-V CPU using `gdb` or [VisualGDB](https://visualgdb.com/).
+
+### Windows ULX3S USB driver compatibility
+
+The table below applies to the **on-board ULX3S FT231X on US1**. It does not describe the separate CH340/CH341, CP210x, FTDI-UART, or other external USB-to-UART adapter used by the Hazard3-Doom Web Serial console.
+
+<table>
+  <thead>
+    <tr><th>Tool / path</th><th>WinUSB</th><th>FTDI VCP/D2XX</th><th>libusbK</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>OpenOCD (ULX3S FT231X JTAG)</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td></tr>
+    <tr><td>GDB through OpenOCD</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No OpenOCD transport</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td></tr>
+    <tr><td>Hazard3-Doom WebUSB FPGA/JTAG flasher</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No</td></tr>
+    <tr><td>Windows fujprog / FTDI D2XX tools</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#2e9d50;margin-right:.35em"></span>Works</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#c43d3d;margin-right:.35em"></span>No</td></tr>
+    <tr><td>Web Serial UART / PuTTY on an external USB-UART adapter</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#7f8c8d;margin-right:.35em"></span>N/A</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#7f8c8d;margin-right:.35em"></span>N/A</td><td><span style="display:inline-block;width:.8em;height:.8em;border-radius:50%;background:#7f8c8d;margin-right:.35em"></span>N/A</td></tr>
+  </tbody>
+</table>
+
+For the current Hazard3-Doom workflow, **WinUSB is the most convenient FT231X binding when both OpenOCD/GDB and the browser WebUSB flasher are needed**. Switch back to FTDI VCP/D2XX only when an FTDI-native tool such as Windows `fujprog` requires it. Changing the FT231X driver does not reset an already configured FPGA.
 
 ## Quickstart
 
-Here are some instructions for getting started quickly with Doom on the ULX3S 85F and ULX4M-LD 85F.
+Here are some instructions for getting started quickly with Doom on the ULX3S 85F, compact ULX3S 12F, and ULX4M-LD 85F.
 
 ### Fetch Hazard3-Doom
 
@@ -117,20 +136,38 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ./scripts/build-ulx3s-doom.sh
 ```
 
-#### Build for ULX4M-LD 85F
+#### Build for ULX3S 12F
+
+The compact 12F target defaults to a 32 MiB SDRAM map, a 40 MHz Hazard3 clock,
+and the 320x200 Doom/video path.
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
-./scripts/build-ulx4m-ld-doom.sh
+./scripts/build-ulx3s-12f-doom.sh
 ```
 
-The complex design may require `ALLOW_TIMING_FAILURE=1`
+#### Build for ULX4M-LD 85F
+
+The current ULX4M-LD route has known `clk_sys` and LiteDRAM timing misses. Use
+the explicit development timing waiver when generating this bitstream; the
+misses remain visible as warnings.
 
 ```bash
-FORCE_BITSTREAM_REBUILD=1 \
-ALLOW_TIMING_FAILURE=1    \
-  ./scripts/build-ulx4m-ld-bitstream.sh
+cd "${WORKSPACE}/Hazard3-Doom"
+ALLOW_TIMING_FAILURE=1 ./scripts/build-ulx4m-ld-doom.sh
 ```
+
+#### Current FPGA validation
+
+| Target | Seed | Routed result | Status |
+|---|---:|---|---|
+| ULX3S 85F | 55 | `clk_sys` 51.77 MHz | PASS at 50 MHz |
+| ULX3S 12F | 65 | `clk_sys` 42.11 MHz | PASS at 40 MHz |
+| ULX4M-LD 85F | 232 | `clk_sys` 43.78 MHz; LiteDRAM 64.65 MHz | FAIL at 50 MHz / 75.01 MHz; development waiver |
+
+These are regression checkpoints for the current RTL, seeds, and tool flow, not
+portable timing guarantees. Rerun routed timing after material netlist or
+toolchain changes.
 
 #### Build only Console Monitor
 
@@ -150,27 +187,42 @@ shortly later Doom should launch once the FPGA bitstream is loaded. (see [Load S
 
 #### Program the ULX3S with fujprog from WSL
 
-A bitstream file should have been created in the `${WORKSPACE}/Hazard3-Doom/build/ulx3s` directory.
+The locally built ULX3S 85F bitstream is `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s.bit`; the 12F build creates `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s_12f.bit`.
 
-On Windows, `fujprog` requires the default FTDI driver. After loading the bitstream, replace the ULX3S FT231X driver with `libusbK` using Zadig before starting OpenOCD. Changing the driver does not reset the FPGA.
+On Windows, `fujprog` requires the default FTDI VCP/D2XX driver. 
+The current ULX3S OpenOCD `ft232r` path has been verified with **WinUSB as well as libusbK**, 
+so libusbK is no longer mandatory. If you also use the browser WebUSB flasher, 
+WinUSB is the convenient shared choice for WebUSB and OpenOCD/GDB. 
+Changing the FT231X driver does not reset the FPGA.
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
 
 # Locally built bitstream:
-./bin/fujprog-v48-win64.exe ./build/ulx3s/fpga_ulx3s.bit
+./bin/fujprog-v48-win64.exe ./build/fpga_ulx3s.bit
 
-# Or use the prebuilt bitstream:
+# Or use the prebuilt ULX3S 85F bitstream:
 ./bin/fujprog-v48-win64.exe ./bin/fpga_ulx3s_hdmi_doom.bit
+
+# Locally built ULX3S 12F bitstream:
+./bin/fujprog-v48-win64.exe ./build/fpga_ulx3s_12f.bit
+```
+
+The compact 12F FPGA image uses a small bootstrap rather than the full resident
+monitor in EBR. After programming the 12F FPGA and starting OpenOCD, load the
+SDRAM-resident monitor with:
+
+```bash
+./scripts/load-firmware-12f.sh
 ```
 
 #### Program the ULX4M-LD with openFPGALoader from WSL
 
-A bitstream file should have been created in the `${WORKSPACE}/Hazard3-Doom/build/ulx4m` directory.
+The locally built ULX4M-LD bitstream is `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx4m_ld.bit`.
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
-./bin/openFPGALoader.exe --dfu --vid 0x1d50 --pid 0x614b --altsetting 0 ./build/ulx4m/fpga_ulx4m_ld.bit
+./bin/openFPGALoader.exe --dfu --vid 0x1d50 --pid 0x614b --altsetting 0 ./build/fpga_ulx4m_ld.bit
 ```
 
 ### OpenOCD
@@ -183,7 +235,8 @@ A version built with RISC-V architecture support is required. RISC-V support is 
 
 **NOTE** The ULX3S on-board FT231X requires OpenOCD built with `ft232r` bit-bang support, such as [xPack OpenOCD](https://xpack-dev-tools.github.io/openocd-xpack/).
 
-**NOTE** The ULX3S must use the `libusbK` driver with OpenOCD. Zadig can install or replace this driver. Switch back to the FTDI driver before using the Windows `fujprog` executable again.
+**NOTE** On Windows, the current ULX3S OpenOCD `ft232r` path works with the on-board FT231X bound to **WinUSB or libusbK**. 
+WinUSB is preferred when the same machine also uses the Hazard3-Doom browser WebUSB flasher. The default FTDI VCP/D2XX driver is still required by Windows `fujprog`. Zadig can switch the FT231X binding when needed.
 
 Windows users of VisualGDB can find a copy of the tools in the ESP32 toolchain:
 
@@ -480,9 +533,9 @@ chmod +x ./scripts/build-ulx3s-85f-bitstream.sh
 
 #### Error ft232r not found
 
-Ensure the ULX3S is using the `libusbK` driver when running OpenOCD. Use Zadig to change from `FTDI` (Windows default) as needed.
+Ensure the ULX3S on-board FT231X is using **WinUSB or libusbK** when running the current libusb-based OpenOCD `ft232r` path. WinUSB has been verified working and is preferred when you also use the browser WebUSB flasher. The default FTDI VCP/D2XX binding is for FTDI-native applications such as Windows `fujprog`.
 
-This error occurs when OpenOCD tries to use the default FTDI driver on Windows:
+This error can occur when OpenOCD tries to use an incompatible Windows binding:
 
 ```text
 $ ./bin/openocd.exe -d2 -f ./third_party/Hazard3/example_soc/ulx3s-openocd.cfg
@@ -502,8 +555,7 @@ Traceback (most recent call last):
 
 #### Cannot find JTAG cable
 
-After changing drivers the ULX3S is still not recognized by `fuprog`: try unplugging, wait 30 seconds, plug back into USB.
-Confirm withZadig that the drivers are as desired (FTDI for FPGA bitstream, `libusbK` for JTAG debug).
+After changing drivers the ULX3S is still not recognized by `fujprog`: try unplugging, wait, then reconnect `US1`. Confirm with Zadig that the FT231X binding matches the tool: FTDI VCP/D2XX for Windows `fujprog`, or WinUSB/libusbK for the current OpenOCD path.
 
 ```
 ULX2S / ULX3S JTAG programmer v4.8 (git 96ebb45 built Oct  7 2020 22:42:00)
@@ -511,6 +563,20 @@ Copyright (C) Marko Zec, EMARD, gojimmypi, kost and contributors
 FT_Open() failed
 Cannot find JTAG cable.
 ```
+
+#### Web Serial no longer finds the external UART after debug activity
+
+The Web Serial UART and the ULX3S FT231X/JTAG connection are separate USB devices. A verified Windows/Chrome failure mode is that Chrome logs the external COM port as removed during a debug session and does not add it again when OpenOCD is simply stopped. PuTTY may still be able to open the COM port because Windows still has the serial device, while Chrome's Web Serial enumeration remains stale.
+
+Recovery:
+
+1. Close PuTTY, upload scripts, and other serial-port owners.
+2. Stop OpenOCD.
+3. Physically unplug and reconnect **the external USB-UART adapter**. Stopping OpenOCD alone may not force Chrome to re-enumerate it.
+4. Check `chrome://device-log/?types=Serial,USB&refresh=1` for a fresh `Serial device added` event.
+5. Use **Connect** in the Hazard3-Doom web UI to reopen the browser device chooser.
+
+Do not change the external UART adapter to WinUSB merely because the ULX3S FT231X uses WinUSB. A normal CH340/CH341 UART should remain on its normal Windows serial driver so it continues to provide a COM port.
 
 #### Error: could not open port Access is denied
 
@@ -570,7 +636,7 @@ The `scripts/hazard3-doom-source-status.sh` may be helpful in determining the st
 Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [contributing notes](https://github.com/ulx3s/Hazard3/blob/ulx-doom/Contributing.md#pull-requests).
 
 
-### gojimmypi
+### gojimmypi repository owner compares
 
 Active Development Compare
 
@@ -597,7 +663,7 @@ Doom Generic
 - [https://github.com/gojimmypi/doomgeneric](https://github.com/gojimmypi/doomgeneric) (no gojimmypi development branches)
 
 
-### ulx3s
+### ulx3s repository owner compares
 
 Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [contributing notes](https://github.com/ulx3s/Hazard3/blob/ulx-doom/Contributing.md#pull-requests).
 
@@ -607,5 +673,17 @@ Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [
 - [ozkl/doomgeneric/master ... ulx3s/doomgeneric/ulx-doom](https://github.com/ozkl/doomgeneric/compare/master...ulx3s:doomgeneric:ulx-doom?expand=1)
 
 ---
+
+## Chat and support
+
+Discord Channel
+
+  - https://discord.gg/qwMUk6W (problems/question/general chat)
+
+Gitter Channel
+
+  - https://gitter.im/ulx3s/Lobby (Focused on development)
+
+--- 
 
 Back to [ULX3S project site](https://ulx3s.github.io/). Improve [this page](https://github.com/ulx3s/ulx3s.github.io/blob/master/ulx-doom/index.md).
