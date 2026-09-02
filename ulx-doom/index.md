@@ -11,7 +11,7 @@ See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` bra
 
 Conceptually:
 
-- Configure the FPGA with the Hazard3 RISC-V SoC bitstream. On Windows, the ULX3S on-board FT231X driver depends on the host tool: WinUSB for the browser WebUSB flasher, FTDI VCP/D2XX for Windows `fujprog`, and WinUSB or libusbK for the current OpenOCD `ft232r` path.
+- Configure the FPGA with the Hazard3 RISC-V SoC bitstream. On Windows, the ULX3S on-board FT231X driver depends on the host tool: WinUSB for the browser WebUSB flasher, FTDI VCP/D2XX for Windows `fujprog`, and WinUSB or libusbK for the current OpenOCD `ft232r` path. ULX4M-LD uses its separate Micro-B DFU bootloader for FPGA programming and an external Tigard for JTAG/UART debug.
 - Load or update the resident monitor through OpenOCD/GDB when doing a software-only monitor build.
 - Upload the packaged Doom `.h3d` image over the separate UART connection, or load it from micro-SD.
 - Upload/use a compatible Doom IWAD containing the game data.
@@ -148,14 +148,20 @@ cd "${WORKSPACE}/Hazard3-Doom"
 
 #### Build for ULX4M-LD 85F
 
-The current ULX4M-LD route has known `clk_sys` and LiteDRAM timing misses. Use
-the explicit development timing waiver when generating this bitstream; the
-misses remain visible as warnings.
+The hardware-qualified ULX4M-LD profile uses a 40 MHz Hazard3/AHB clock and a
+60 MHz LiteDRAM user clock. The normal complete board build is still an
+exploratory route and is not the same as the qualified seed-sweep route:
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
 ALLOW_TIMING_FAILURE=1 ./scripts/build-ulx4m-ld-doom.sh
 ```
+
+For a bitstream you intend to qualify, use the seed-sweep flow. The current
+qualified routing checkpoint is seed 2 with HeAP `timingweight=30`,
+`critexp=3`, and timing-driven rip-up. It passed both nextpnr timing and the
+hardware DDR tests. Any complete rebuild that changes the netlist must be
+rerouted and requalified.
 
 #### Current FPGA validation
 
@@ -163,7 +169,7 @@ ALLOW_TIMING_FAILURE=1 ./scripts/build-ulx4m-ld-doom.sh
 |---|---:|---|---|
 | ULX3S 85F | 55 | `clk_sys` 51.77 MHz | PASS at 50 MHz |
 | ULX3S 12F | 65 | `clk_sys` 42.11 MHz | PASS at 40 MHz |
-| ULX4M-LD 85F | 232 | `clk_sys` 43.78 MHz; LiteDRAM 64.65 MHz | FAIL at 50 MHz / 75.01 MHz; development waiver |
+| ULX4M-LD 85F | 2 | `clk_sys` 43.94 MHz; LiteDRAM 67.81 MHz | PASS at 40 MHz / 60 MHz; DDR hardware-qualified |
 
 These are regression checkpoints for the current RTL, seeds, and tool flow, not
 portable timing guarantees. Rerun routed timing after material netlist or
@@ -178,9 +184,18 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ./scripts/build.sh
 ```
 
+For a software-only ULX4M-LD monitor matching the qualified 40 MHz FPGA:
+
+```bash
+HAZARD3_BUILD_DIR="$PWD/build/ulx4m-ld-40mhz/monitor" \
+HAZARD3_MEMORY_PROFILE=64m \
+HAZARD3_SYS_CLK_HZ=40000000 \
+    ./scripts/build.sh
+```
+
 ### Program the FPGA
 
-Use [web](https://ulx3s.github.io/Hazard3-Doom/) or command-line `fujprog` or `openFPGALoader` to load the FPGA bitstream into SRAM. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
+Use [web](https://ulx3s.github.io/Hazard3-Doom/) or `fujprog` for the ULX3S test path. ULX4M-LD uses its DFU bootloader with `openFPGALoader`; after writing the user image, `dfu-util -a 0 -e` explicitly leaves DFU and starts it. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
 
 If the Doom files are loaded on the SD card, an HDMI test pattern should appear and then 
 shortly later Doom should launch once the FPGA bitstream is loaded. (see [Load SD Card](./index.html#load-sd-card), below) 
@@ -216,14 +231,57 @@ SDRAM-resident monitor with:
 ./scripts/load-firmware-12f.sh
 ```
 
-#### Program the ULX4M-LD with openFPGALoader from WSL
+#### Program the ULX4M-LD with DFU from WSL
 
 The locally built ULX4M-LD bitstream is `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx4m_ld.bit`.
+The ULX4M Micro-B DFU device uses VID:PID `1d50:614b`; this is separate from
+Tigard JTAG/UART.
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
-./bin/openFPGALoader.exe --dfu --vid 0x1d50 --pid 0x614b --altsetting 0 ./build/fpga_ulx4m_ld.bit
+./bin/openFPGALoader.exe --dfu \
+    --vid 0x1d50 --pid 0x614b --altsetting 0 \
+    ./build/fpga_ulx4m_ld.bit
+
+# Leave the DFU bootloader and execute the stored user image.
+./bin/dfu-util.exe -a 0 -e
 ```
+
+If the UART is silent and OpenOCD can read ECP5 IDCODE `0x01113043` but reports
+`dtmcontrol is 0`, first confirm the board has left DFU and the user bitstream
+is running.
+
+#### ULX4M-LD Tigard quick debug setup
+
+Use Tigard in JTAG mode, target power OFF, 3.3 V reference. Configure Windows
+once and keep it this way:
+
+| Tigard USB interface | FT2232H channel | Driver | Use |
+|---|---|---|---|
+| Interface 0 | A | FTDI VCP | 115200 UART COM port |
+| Interface 1 | B | libusbK | OpenOCD JTAG |
+
+Do not install libusbK on Interface 0 or the UART COM port disappears. OpenOCD
+uses `ftdi channel 1`; the qualified LFE5UM-85F IDCODE is `0x01113043`. The
+established Tigard setup has no target reset wire connected.
+
+Start OpenOCD with:
+
+```bash
+./bin/openocd.exe -d2 \
+    -f ./third_party/Hazard3/example_soc/ulx4m-openocd-tigard.cfg
+```
+
+Then load the 40 MHz monitor in another terminal:
+
+```bash
+./scripts/load-firmware.sh \
+    ./build/ulx4m-ld-40mhz/monitor/hazard3-boot-monitor.elf
+```
+
+On the monitor, run `s` and require `external_memory_ready=YES`, then run `q`.
+The current qualified route also passes `k` (40 MiB heap stress), `d` (Doom
+memory/timer smoke test), and `x` (copied RV32 execution from DDR).
 
 ### OpenOCD
 
