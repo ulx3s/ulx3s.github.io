@@ -38,10 +38,12 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 
 * [JTAG Doom on the Hazard3 soft RISC-V](https://ulx3s.github.io/ulx-doom/) (also works on ULX4M-LD)
 
+* [Web Uploader Device Tool](https://ulx3s.github.io/Hazard3-Doom/) FPGA bitfiles also generated with [Board Integration Builds](https://github.com/ulx3s/Hazard3-Doom/blob/main/.github/workflows/fpga-builds.yml) workflow artifact.
+
 ## ULX3S manual
 
 * [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
-* [Pinout label image generator](https://github.com/ulx3s/ulx3s-pinout)
+* [Pinout label image generator](https://github.com/ulx3s/ulx3s-pinout) for both the ULX3S and the ULX4M-LD on the [WaveShare CM4-IO-BASE-A Carrier](https://www.waveshare.com/wiki/CM4-IO-BASE-A).
 
 ## Projects and Examples
 
@@ -124,6 +126,7 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 Test your ASIC design on the ULX3S 
 
 * [Tiny Tapeout](https://tinytapeout.com/)
+* [ULX3S GitHub Actions](https://github.com/ulx3s/Hazard3-Doom/blob/main/.github/workflows/tt-fpga-ulx.yaml), using [tt-gds-action](https://github.com/ulx3s/tt-gds-action) and [tt-support-tools](https://github.com/ulx3s/tt-support-tools/tree/experimental).
 
 There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky-verilog-template/issues/22) for the ULX3S, but a working example is available:
 

@@ -1,13 +1,14 @@
 # ULX-DOOM
 
-Doom on the ULX3S 85F, ULX3S 12F, and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU with JTAG single-step debug capabilities.
+Doom on the ULX3S 85F, ULX3S 12F, and ULX4M-LD 85F using Luke's Hazard3 RISC-V soft FPGA CPU with HDMI output and JTAG single-step debug capabilities.
 
-|  |
-|:------:|
-| [<img src="./images/ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) |
-| [youtube.com/shorts/4TTZ9huWvjI](https://www.youtube.com/shorts/4TTZ9huWvjI) |
+| |          | |
+| | :------: | |
+| | [<img src="./images/ULX4M-Doom-Video.jpg" alt="ULX4M Doom video splash screen" width="299">](https://www.youtube.com/shorts/4TTZ9huWvjI) | |
+| | [youtube.com/shorts/4TTZ9huWvjI](https://www.youtube.com/shorts/4TTZ9huWvjI) | |
 
 See [Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom) and the `ulx-doom` branch of [Hazard3 Fork](https://github.com/ulx3s/Hazard3/tree/ulx-doom).
+Full documentation at [hazard3-doom.readthedocs.io](https://hazard3-doom.readthedocs.io/)
 
 Conceptually:
 
@@ -165,11 +166,17 @@ rerouted and requalified.
 
 #### Current FPGA validation
 
-| Target | Seed | Routed result | Status |
-|---|---:|---|---|
-| ULX3S 85F | 55 | `clk_sys` 51.77 MHz | PASS at 50 MHz |
-| ULX3S 12F | 65 | `clk_sys` 42.11 MHz | PASS at 40 MHz |
-| ULX4M-LD 85F | 2 | `clk_sys` 43.94 MHz; LiteDRAM 67.81 MHz | PASS at 40 MHz / 60 MHz; DDR hardware-qualified |
+These seeds are for the 0.2.0 release.
+
+See the latest default seeds in [scripts/build-ecp5-bitstream-common.sh](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ecp5-bitstream-common.sh).
+
+Routing time is taken into account when chosing default seeds.
+
+| Target       | Seed                                                                                           | Routed result       | Status |
+| ------------ | ---------------------------------------------------------------------------------------------: |---------------------|----------------|
+| ULX3S 85F    | [11](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx3s-85f-sweep_summary.md) | `clk_sys` 52.24 MHz | PASS at 50 MHz |
+| ULX3S 12F    | [82](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx3s-12f-sweep_summary.md) | `clk_sys` 42.70 MHz | PASS at 40 MHz |
+| ULX4M-LD 85F | [83](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx4m-ld-sweep_summary.md)  | `clk_sys` 43.63 MHz; LiteDRAM 67.51 MHz | PASS at 40 MHz / 60 MHz; DDR hardware-qualified |
 
 These are regression checkpoints for the current RTL, seeds, and tool flow, not
 portable timing guarantees. Rerun routed timing after material netlist or
