@@ -696,7 +696,7 @@ Note that `/mnt/c/` is from WSL and is not a valid path in DOS.
 
 ## Development Status
 
-The `scripts/hazard3-doom-source-status.sh` may be helpful in determining the status of various submodule branches.
+The [scripts/hazard3-doom-source-status.sh](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/hazard3-doom-source-status.sh) may be helpful in determining the status of various submodule branches.
 
 Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [contributing notes](https://github.com/ulx3s/Hazard3/blob/ulx-doom/Contributing.md#pull-requests).
 
@@ -750,11 +750,11 @@ Of particular interest there is the [synth_ecp5.mk](https://github.com/Wren6991/
 
 Discord Channel
 
-  - https://discord.gg/qwMUk6W (problems/question/general chat); [#hazard3-doom](https://discord.com/channels/690209441953480758/1546280673822642186)
+  - [https://discord.gg/qwMUk6W](https://discord.gg/qwMUk6W) (problems/question/general chat); [#hazard3-doom](https://discord.com/channels/690209441953480758/1546280673822642186)
 
 Gitter Channel
 
-  - https://gitter.im/ulx3s/Lobby (Focused on development)
+  - [https://gitter.im/ulx3s/Lobby](https://gitter.im/ulx3s/Lobby) (Focused on development)
 
 --- 
 
