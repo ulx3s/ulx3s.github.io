@@ -703,27 +703,27 @@ Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [
 
 ### gojimmypi repository owner compares
 
-Active Development Compare
+#### Active Development Compare
 
 - gojimmypi Hazard3 `ulx-doom-dev` vs release [ulx3s/Hazard3/ulx-doom ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/ulx-doom...gojimmypi:Hazard3:ulx-doom-dev?expand=1) 
 
-Hazard3 Doom Project
+#### Hazard3 Doom Project
 
 - [ulx3s/Hazard3-Doom/main ... gojimmypi/Hazard3-Doom/develop](https://github.com/ulx3s/Hazard3-Doom/compare/main...gojimmypi:Hazard3-Doom:develop?expand=1) 
 
-Hazard3 RISC-V CPU submodule vs upstream `ulx3s/Hazard3` repository branches:
+#### Hazard3 RISC-V CPU submodule vs upstream `ulx3s/Hazard3` repository branches:
 
 - [ulx3s/Hazard3/stable ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/stable...gojimmypi:Hazard3:ulx-doom-dev?expand=1) (dev vs stable)
 - [ulx3s/Hazard3/develop ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/develop...gojimmypi:Hazard3:ulx-doom-dev?expand=1) (dev vs upstream develop, PR here)
 - [ulx3s/Hazard3/ulx-doom ... gojimmypi/Hazard3/ulx-doom-dev](https://github.com/ulx3s/Hazard3/compare/ulx-doom...gojimmypi:Hazard3:ulx-doom-dev?expand=1) * `ulx-doom` is main production branch
 
-Hazard3 RISC-V CPU submodule vs upstream `Wren6991` repository branches:
+#### Hazard3 RISC-V CPU submodule vs upstream `Wren6991` repository branches:
 
 - [Wren6991/Hazard3/stable ... gojimmypi/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/stable...gojimmypi:Hazard3:ulx-doom?expand=1)
 - [Wren6991/Hazard3/develop ... gojimmypi/Hazard3/develop](https://github.com/Wren6991/Hazard3/compare/develop...gojimmypi:Hazard3:develop?expand=1)
 - [Wren6991/Hazard3/develop ... gojimmypi/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/develop...gojimmypi:Hazard3:ulx-doom?expand=1)
 
-Doom Generic
+#### Doom Generic
 
 - [https://github.com/gojimmypi/doomgeneric](https://github.com/gojimmypi/doomgeneric) (no gojimmypi development branches)
 
@@ -737,13 +737,20 @@ Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [
 - [Wren6991/Hazard3/develop ... ulx3s/Hazard3/ulx-doom](https://github.com/Wren6991/Hazard3/compare/develop...ulx3s:Hazard3:ulx-doom?expand=1)
 - [ozkl/doomgeneric/master ... ulx3s/doomgeneric/ulx-doom](https://github.com/ozkl/doomgeneric/compare/master...ulx3s:doomgeneric:ulx-doom?expand=1)
 
+### Hazard3 scripts
+
+Beware the `third_party/Hazard3/scripts` directory is an [upstream Wren6991 `fpgascripts` submodule](https://github.com/Wren6991/fpgascripts/tree/1e768865928782ec6b0c34e7a30c06857a02155c) 
+currently pinned to commit `11e76886592` and without a `ulx-doom` fork or branch at this time.
+
+Of particular interest there is the [synth_ecp5.mk](https://github.com/Wren6991/fpgascripts/blob/1e768865928782ec6b0c34e7a30c06857a02155c/synth_ecp5.mk) makefile. Use caution when editing for contribution or saving to github.
+
 ---
 
 ## Chat and support
 
 Discord Channel
 
-  - https://discord.gg/qwMUk6W (problems/question/general chat)
+  - https://discord.gg/qwMUk6W (problems/question/general chat); [#hazard3-doom](https://discord.com/channels/690209441953480758/1546280673822642186)
 
 Gitter Channel
 
