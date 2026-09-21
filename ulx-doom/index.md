@@ -42,6 +42,10 @@ For the current Hazard3-Doom workflow, **WinUSB is the most convenient FT231X bi
 
 Here are some instructions for getting started quickly with Doom on the ULX3S 85F, compact ULX3S 12F, and ULX4M-LD 85F.
 
+Any compatible HDMI display can be used. The documentation also includes the Elecrow seven-inch HDMI panel as a compact example with an optional [3D-printable ULX3S enclosure](https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure).
+
+See the [docs for a no-install quick start](https://hazard3-doom.readthedocs.io/en/latest/getting-started/no-install.html), too.
+
 ### Fetch Hazard3-Doom
 
 The [Hazard3-Doom repository](https://github.com/ulx3s/Hazard3-Doom) contains submodules; be sure to clone it recursively from your workspace directory.
@@ -89,10 +93,14 @@ git submodule update --init --recursive
 ```
 ### No Local Toolchain
 
-It is highly recommended to have the toolchain installed locally. It is however, not required.
+A local FPGA/RISC-V build toolchain is not required for the browser-based ULX3S 85F quick-start path. The preferred published prebuilt files are in the [bin directory](https://github.com/ulx3s/Hazard3-Doom/tree/main/bin):
 
-Generated binaries are included in the GitHub workflow [fpga-builds.yml](https://github.com/ulx3s/Hazard3-Doom/blob/main/.github/workflows/fpga-builds.yml)
-actions artifacts:
+- ULX3S 85F: `fpga_ulx3s_85f.bit` and `hazard3-doom-ulx3s-85F.h3img`
+- ULX3S 12F: `fpga_ulx3s_12f.bit` and `hazard3-doom-ulx3s-12F.h3img`
+
+Use `bin/INVENTORY.md` and the checksum inventory to identify and verify the published files. The [Board integration builds](https://github.com/ulx3s/Hazard3-Doom/actions/workflows/fpga-builds.yml) workflow is a second source for recent successful artifacts, but workflow artifacts are temporary.
+
+The ULX3S 12F still requires a local Hazard3-Doom checkout with OpenOCD/GDB after FPGA programming because its compact FPGA image contains only a 1 KiB UART bootstrap; the full monitor is loaded into SDRAM with `./scripts/load-firmware-12f.sh`.
 
 ![fpga builds artifacts](./images/fpga-builds-artifacts.png)
 
@@ -122,11 +130,22 @@ or use the files in [Hazard3-Doom/bin](https://github.com/ulx3s/Hazard3-Doom/tre
 
 Users of VisualGDB can proceed with the [ulx3s/Hazard3-Doom/VisualGDB/](https://github.com/ulx3s/Hazard3-Doom/blob/main/VisualGDB/README.md) instructions.
 
-Linux users can bake their own cake.
+Linux users can bake their own cake. To [make things easier](https://hazard3-doom.readthedocs.io/en/latest/getting-started/quick-start.html#install-software-requirements):
+
+```bash
+wget \
+    https://raw.githubusercontent.com/ulx3s/Hazard3-Doom/main/scripts/full-install.sh \
+    https://raw.githubusercontent.com/ulx3s/Hazard3-Doom/main/scripts/check-system-requirements.sh
+
+chmod +x ./full-install.sh
+chmod +x ./check-system-requirements.sh
+
+./full-install.sh
+```
 
 ### Build
 
-To get started more quickly, there is a prebuilt bitstream file called `fpga_ulx3s_hdmi_doom.bit` in the [bin directory](https://github.com/ulx3s/Hazard3-Doom/tree/main/bin).
+To get started more quickly, use the published ULX3S 85F pair `fpga_ulx3s_85f.bit` and `hazard3-doom-ulx3s-85F.h3img` from the [bin directory](https://github.com/ulx3s/Hazard3-Doom/tree/main/bin).
 
 To build everything from source:
 
@@ -134,7 +153,16 @@ To build everything from source:
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
-./scripts/build-ulx3s-doom.sh
+./scripts/build-ulx3s-85f-doom.sh
+```
+
+Important ULX3S 85F outputs include:
+
+```text
+build/fpga_ulx3s_85f.bit
+build/ulx3s-85f/monitor/hazard3-boot-monitor.elf
+build/ulx3s-85f/doom-image/hazard3-doom.h3img
+build/ulx3s-85f/hazard3-boot-monitor.hex
 ```
 
 #### Build for ULX3S 12F
@@ -176,7 +204,7 @@ Routing time is taken into account when choosing default seeds.
 | ------------ | ---------------------------------------------------------------------------------------------: |---------------------|----------------|
 | ULX3S 85F    | [11](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx3s-85f-sweep_summary.md) | `clk_sys` 52.24 MHz | PASS at 50 MHz |
 | ULX3S 12F    | [82](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx3s-12f-sweep_summary.md) | `clk_sys` 42.70 MHz | PASS at 40 MHz |
-| ULX4M-LD 85F | [83](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx4m-ld-sweep_summary.md)  | `clk_sys` 43.63 MHz; LiteDRAM 67.51 MHz | PASS at 40 MHz / 60 MHz; DDR hardware-qualified |
+| ULX4M-LD 85F | [83](https://github.com/ulx3s/Hazard3-Doom/blob/main/scripts/build-ulx4m-ld-sweep_summary.md)  | `clk_sys` 43.63 MHz; LiteDRAM 67.51 MHz | PASS at 40 MHz / 60 MHz; selected release route |
 
 These are regression checkpoints for the current RTL, seeds, and tool flow, not
 portable timing guarantees. Rerun routed timing after material netlist or
@@ -191,10 +219,10 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ./scripts/build.sh
 ```
 
-For a software-only ULX4M-LD monitor matching the qualified 40 MHz FPGA:
+For a software-only ULX4M-LD monitor matching the qualified 40 MHz FPGA, keep the test ELF separate from the complete board-build output:
 
 ```bash
-HAZARD3_BUILD_DIR="$PWD/build/ulx4m-ld/monitor" \
+HAZARD3_BUILD_DIR="$PWD/build/ulx4m-ld-monitor-test/monitor" \
 HAZARD3_MEMORY_PROFILE=64m \
 HAZARD3_SYS_CLK_HZ=40000000 \
     ./scripts/build.sh
@@ -202,14 +230,13 @@ HAZARD3_SYS_CLK_HZ=40000000 \
 
 ### Program the FPGA
 
-Use [web](https://ulx3s.github.io/Hazard3-Doom/) or `fujprog` for the ULX3S test path. ULX4M-LD uses its DFU bootloader with `openFPGALoader`; after writing the user image, `dfu-util -a 0 -e` explicitly leaves DFU and starts it. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
+Use the [Hazard3-Doom Device Tool](https://ulx3s.github.io/Hazard3-Doom/) or `fujprog` for the ULX3S test path. ULX4M-LD uses its DFU bootloader with `openFPGALoader`; after writing the user image, `dfu-util -a 0 -e` explicitly leaves DFU and starts it. The bitstream configures the FPGA with the soft RISC-V CPU and its peripherals.
 
-If the Doom files are loaded on the SD card, an HDMI test pattern should appear and then 
-shortly later Doom should launch once the FPGA bitstream is loaded. (see [Load SD Card](./index.html#load-sd-card), below) 
+For standalone micro-SD cold boot, the validated FPGA configuration must already be stored in onboard SPI flash. The micro-SD card carries the Doom application and IWAD, not the FPGA bitstream. After power-up, the ECP5 configures from SPI flash, the resident monitor initializes SDRAM and micro-SD, and Doom launches from `DOOM.IMG` and `DOOM.WAD`. (see [Load SD Card](./index.html#load-sd-card), below)
 
 #### Program the ULX3S with fujprog from WSL
 
-The locally built ULX3S 85F bitstream is `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s.bit`; the 12F build creates `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s_12f.bit`.
+The locally built ULX3S 85F bitstream is `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s_85f.bit`; the 12F build creates `${WORKSPACE}/Hazard3-Doom/build/fpga_ulx3s_12f.bit`.
 
 On Windows, `fujprog` requires the default FTDI VCP/D2XX driver. 
 The current ULX3S OpenOCD `ft232r` path has been verified with **WinUSB as well as libusbK**, 
@@ -221,10 +248,10 @@ Changing the FT231X driver does not reset the FPGA.
 cd "${WORKSPACE}/Hazard3-Doom"
 
 # Locally built bitstream:
-./bin/fujprog-v48-win64.exe ./build/fpga_ulx3s.bit
+./bin/fujprog-v48-win64.exe ./build/fpga_ulx3s_85f.bit
 
 # Or use the prebuilt ULX3S 85F bitstream:
-./bin/fujprog-v48-win64.exe ./bin/fpga_ulx3s_hdmi_doom.bit
+./bin/fujprog-v48-win64.exe ./bin/fpga_ulx3s_85f.bit
 
 # Locally built ULX3S 12F bitstream:
 ./bin/fujprog-v48-win64.exe ./build/fpga_ulx3s_12f.bit
@@ -365,7 +392,14 @@ gdb report_data_abort enable
 init
 ```
 
-Run the OpenOCD server in a dedicated terminal window:
+Run the OpenOCD server in a dedicated terminal window. The project launcher is the preferred path:
+
+```bash
+cd "${WORKSPACE}/Hazard3-Doom"
+./scripts/start-openocd.sh
+```
+
+Or invoke OpenOCD directly when you need explicit options:
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
@@ -440,7 +474,7 @@ Each helper selects the monitor produced by the corresponding complete board
 build:
 
 ```text
-ULX3S 85F:    build/ulx3s/monitor/hazard3-boot-monitor.elf
+ULX3S 85F:    build/ulx3s-85f/monitor/hazard3-boot-monitor.elf
 ULX3S 12F:    build/ulx3s-12f/monitor/hazard3-boot-monitor.elf
 ULX4M-LD 85F: build/ulx4m-ld/monitor/hazard3-boot-monitor.elf
 ```
@@ -480,7 +514,7 @@ explicitly:
 ```bash
 # ULX3S 85F
 ./scripts/load-firmware.sh \
-    ./build/ulx3s/monitor/hazard3-boot-monitor.elf
+    ./build/ulx3s-85f/monitor/hazard3-boot-monitor.elf
 
 # ULX4M-LD 85F
 ./scripts/load-firmware.sh \
@@ -497,19 +531,21 @@ its board UART at the configured 115200 baud and accept Doom image/IWAD uploads.
 
 This step is not required when loading from the SD card. (see [Load SD Card](./index.html#load-sd-card), below)
 
-This step requires the monitor/loader firmware loaded with GDB in the previous section and the Doom image created during the build.
+This step requires an active resident monitor and the Doom image created during the build. The normal ULX3S 85F FPGA image already contains the resident monitor, so a GDB firmware load is optional unless updating the monitor. The ULX3S 12F instead requires `./scripts/load-firmware-12f.sh` after FPGA programming because its compact image contains only the UART bootstrap.
 
 The ULX3S requires an external 3v3 USB-to-UART adapter connected as shown:
 
 [<img src="./images/ULX3S-External-UART.jpg" alt="Picture of ULX3S and external USB-to-UART adapter" width="300">](./images/ULX3S-External-UART.jpg)
 
-Load the Doom image produced by the complete board build. For ULX3S 85F:
+The hosted [Hazard3-Doom Device Tool](https://ulx3s.github.io/Hazard3-Doom/) can perform both UART transfers directly in the browser: connect the board UART under **Serial connection**, then use **Doom H3IMG uploader** and **Doom IWAD uploader** under **Device uploading**.
+
+The command-line uploader remains available when preferred. Load the Doom image produced by the complete board build. For ULX3S 85F:
 
 ```bash
 cd "${WORKSPACE}/Hazard3-Doom"
 
 ./doom/upload-doom-image.py \
-    ./build/ulx3s/doom-image/hazard3-doom.h3img \
+    ./build/ulx3s-85f/doom-image/hazard3-doom.h3img \
     --port /dev/ttyS7
 ```
 
@@ -521,7 +557,7 @@ For Windows PowerShell, depending on the specific serial port:
 
 ```powershell
 py ./doom/upload-doom-image.py `
-    ./build/ulx3s/doom-image/hazard3-doom.h3img `
+    ./build/ulx3s-85f/doom-image/hazard3-doom.h3img `
     --port COM7
 ```
 
@@ -537,11 +573,13 @@ cd "${WORKSPACE}/Hazard3-Doom"
 ./doom/upload-wad.py ./wads/DOOM1.WAD --port /dev/ttyS7 --launch
 ```
 
-For Windows, depending on the specific serial port:
+For Windows PowerShell, depending on the specific serial port:
 
 ```powershell
 py ./doom/upload-wad.py ./wads/DOOM1.WAD --port COM7 --launch
 ```
+
+The command-line IWAD uploader defaults to `--memory-profile auto`: it queries the running monitor with `v` and selects the monitor's `32m` or `64m` WAD region. Use an explicit `--memory-profile 32m` or `--memory-profile 64m` only for an older monitor that does not report `memory_profile`. The H3IMG image must still match the board build.
 
 ### Load SD Card
 
@@ -550,11 +588,12 @@ When using the ULX3S SD Card, for instance formatted in Windows like this
 
 ![Windows HAZARD3 SD volume](./images/Windows-HAZARD3-SD-volume.png)
 
-Doom files can be copied to the root of the SD card, named exactly:
+The validated FPGA configuration is stored separately in onboard SPI flash. Copy only the Doom files to the root of the FAT-formatted micro-SD card, named exactly:
 
-- `FPGA.BIT`
 - `DOOM.IMG`
 - `DOOM.WAD`
+
+`DOOM.WAD` is the canonical IWAD filename used by the current cold-boot flow. The monitor supports FAT16/FAT32 root-directory files with 8.3 names, including fragmented files.
 
 For example, like this:
 
@@ -593,10 +632,16 @@ Commands:
   l       receive a packaged Doom image over UART
   w       receive an IWAD into reserved SDRAM
   j       launch/restart the validated Doom image and IWAD
+  b       run the micro-SD boot loader
+  c       print SD/FAT boot status and counters
   f       rewrite/present the 320x200 RGB332 HDMI test frame
   z       reset heap; invalidates every heap pointer
   s       status
   v       version
+  sao info / recover / scan / probe / read / write
+  sao gui launch the I2CDriver-style HDMI diagnostic interface
+  i2c scan
+  i2c gui  alias for sao gui
 ```
 
 ### Full Clean
@@ -651,7 +696,7 @@ retry the UART upload at 115200.
 Ensure the scripts are marked as executable if an error such as this is encountered:
 
 ```
-$ ./scripts/build-ulx3s-doom.sh
+$ ./scripts/build-ulx3s-85f-doom.sh
 Missing required executable: /home/gojimmypi/Hazard3-Doom/scripts/build-ulx3s-85f-bitstream.sh
 Initialize Hazard3 recursively or set HAZARD3_ROOT correctly.
 gojimmypi:~/Hazard3-Doom
@@ -717,12 +762,11 @@ Do not change the external UART adapter to WinUSB merely because the ULX3S FT231
 The scripts must have exclusive access to the serial ports. If anything else is connected, an error like this may occur:
 
 ```
-C:\temp\Hazard3-Doom>py .\doom\upload-doom-image.py .\build\ulx3s\doom-image\hazard3-doom.h3img --port COM7
+C:\temp\Hazard3-Doom>py .\doom\upload-doom-image.py .\build\ulx3s-85f\doom-image\hazard3-doom.h3img --port COM7
 Opening COM7 at 115200; payload=586272, CRC32=0xc94f45cf
 error: could not open port 'COM7': PermissionError(13, 'Access is denied.', None, 5)
 ```
-The error above may also occur if the `Tx` or `Rx` pins do not have a good electrical connection. It is recommends to
-also connected the TTY/USB Ground write, but *NOT* any power pins. Use Vcc=3v3 only
+The error above may also occur if the `Tx` or `Rx` pins do not have a good electrical connection. Use a 3.3 V USB-to-UART adapter, cross TX/RX, connect the adapter ground to ULX3S ground, and do **not** connect the adapter VCC pin.
 
 #### No such file or directory: DOOM1.WAD
 
@@ -756,7 +800,7 @@ Note that `/mnt/c/` is from WSL and is not a valid path in DOS.
 - Doomgeneric [submodule](https://github.com/ulx3s/Hazard3-Doom/tree/main/third_party) from: [github.com/ozkl/doomgeneric](https://github.com/ozkl/doomgeneric)
 - HDMI Enclosure: [github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure](https://github.com/gojimmypi/ulx3s-elecrow-7inch-hdmi-enclosure)
 - Tigard: [github.com/tigard-tools/tigard](https://github.com/tigard-tools/tigard)
-- The gojimmypi dev branch: [github.com/gojimmypi/Hazard3/ulx3s-dev](https://github.com/gojimmypi/Hazard3/tree/ulx3s-dev)
+- The gojimmypi dev branch: [github.com/gojimmypi/Hazard3/ulx-doom-dev](https://github.com/gojimmypi/Hazard3/tree/ulx-doom-dev)
 - Visual Studio [File Explorer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WorkflowBrowser)
 - Visual Studio [Verilog Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension)
 - [Another tale of building a Doom port for RISC-V](https://armaangomes.com/blogs/doom/)
@@ -809,7 +853,7 @@ Pull requests for `Wren6991/Hazard3` should be opened on `develop` branch. See [
 ### Hazard3 scripts
 
 Beware the `third_party/Hazard3/scripts` directory is an [upstream Wren6991 `fpgascripts` submodule](https://github.com/Wren6991/fpgascripts/tree/1e768865928782ec6b0c34e7a30c06857a02155c) 
-currently pinned to commit `11e76886592` and without a `ulx-doom` fork or branch at this time.
+currently pinned to commit `1e76886592` and without a `ulx-doom` fork or branch at this time.
 
 Of particular interest there is the [synth_ecp5.mk](https://github.com/Wren6991/fpgascripts/blob/1e768865928782ec6b0c34e7a30c06857a02155c/synth_ecp5.mk) makefile. Use caution when editing for contribution or saving to github.
 
