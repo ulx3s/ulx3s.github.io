@@ -45,6 +45,15 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 * [Manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 * [Pinout label image generator](https://github.com/ulx3s/ulx3s-pinout) for both the ULX3S and the ULX4M-LD on the [WaveShare CM4-IO-BASE-A Carrier](https://www.waveshare.com/wiki/CM4-IO-BASE-A).
 
+## Hazard3 Doom Ecosystem
+
+Luke's Hazard3 RISC-V soft CPU core.
+
+* [hazard3-doom.readthedocs.io](https://hazard3-doom.readthedocs.io/)
+* [github.com/ulx3s/Hazard3-Doom](https://github.com/ulx3s/Hazard3-Doom)
+* [Hazard3 RISC-V FPGA ULX4M Doom YouTube by gojimmypi](https://www.youtube.com/shorts/4TTZ9huWvjI)
+* [Support on Discord](https://discord.gg/qwMUk6W) `# hazard3-doom` channel 
+
 ## Projects and Examples
 
 * [6502](https://github.com/emeb/ulx3s_6502) Simple 6502 system on a ULX3S FPGA board using Trellis, Yosys, and Nextpnr
@@ -126,6 +135,8 @@ See [this video](https://www.youtube.com/watch?v=QYzq0DU_BXU) on inserting the S
 Test your ASIC design on the ULX3S 
 
 * [Tiny Tapeout](https://tinytapeout.com/)
+* [ulx3s.github.io/tiny-tapeout](https://ulx3s.github.io/tiny-tapeout/)
+* [GDS Action in GitHub Marketplace for ULX3S and ULX4M](https://github.com/marketplace/actions/tiny-tapeout-gds-action-for-the-ulx3s-and-ulx4m-ecp5-fpga)
 * [ULX3S GitHub Actions](https://github.com/ulx3s/Hazard3-Doom/blob/main/.github/workflows/tt-fpga-ulx.yaml), using [tt-gds-action](https://github.com/ulx3s/tt-gds-action) and [tt-support-tools](https://github.com/ulx3s/tt-support-tools/tree/experimental).
 
 There are currently [open TT Pull Requests](https://github.com/TinyTapeout/ttsky-verilog-template/issues/22) for the ULX3S, but a working example is available:
